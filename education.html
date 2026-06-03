@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Education &amp; Consulting — Finca de Garces | Farmer Education, Bukidnon</title>
+  <meta name="description" content="Finca de Garces walks alongside fellow farmers in Bukidnon, teaching specialty-grade practices, honoring indigenous mountain wisdom, and offering consulting for farmers and cooperatives ready to grow with purpose.">
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Education &amp; Consulting — Finca de Garces | Farmer Education, Bukidnon">
+  <meta property="og:description" content="Finca de Garces walks alongside fellow farmers in Bukidnon, teaching specialty-grade practices, honoring indigenous mountain wisdom, and offering consulting for farmers and cooperatives ready to grow with purpose.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fincadegarces.com/education.html">
+  <meta property="og:image" content="https://fincadegarces.com/assets/img/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Education &amp; Consulting — Finca de Garces | Farmer Education, Bukidnon">
+  <meta name="twitter:description" content="Finca de Garces walks alongside fellow farmers in Bukidnon, teaching specialty-grade practices, honoring indigenous mountain wisdom, and offering consulting for farmers and cooperatives ready to grow with purpose.">
+  <meta name="twitter:image" content="https://fincadegarces.com/assets/img/og-cover.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://fincadegarces.com/education.html">
+
+  <!-- JSON-LD Organization + Service Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "EducationalOrganization"],
+    "name": "Finca de Garces",
+    "url": "https://fincadegarces.com/",
+    "sameAs": [
+      "https://instagram.com/fincadegarces"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pangantucan",
+      "addressRegion": "Bukidnon",
+      "addressCountry": "Philippines"
+    },
+    "description": "Family-run specialty coffee farm in Pangantucan, Bukidnon offering farmer education, indigenous community partnerships, and consulting for farmers and cooperatives transitioning to specialty-grade.",
+    "image": "https://fincadegarces.com/assets/img/og-cover.jpg",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Farmer Education & Consulting",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Specialty Coffee Farm Consulting",
+            "description": "Consulting for individual farmers and cooperatives wanting to transition to specialty-grade coffee production in Bukidnon and surrounding areas."
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Google Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Page-specific styles for education page -->
+  <style>
+    /* ── Education page: indigenous partnership section ── */
+    .section--canopy .pull-quote {
+      color: var(--color-cream);
+      border-color: rgba(235, 156, 53, 0.6);
+    }
+
+    /* ── Pillar list: what we teach ── */
+    .pillar-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .pillar-item {
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+      gap: var(--space-3);
+      align-items: start;
+    }
+
+    .pillar-item__marker {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: rgba(10, 60, 48, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--color-canopy);
+      margin-top: 0.15em;
+    }
+
+    .pillar-item__marker svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .pillar-item__text {
+      font-size: var(--fs-small);
+      line-height: 1.65;
+      color: rgba(23, 23, 23, 0.8);
+    }
+
+    .pillar-item__text strong {
+      display: block;
+      font-weight: 600;
+      color: var(--color-roast);
+      font-size: var(--fs-body);
+      margin-bottom: 0.25em;
+    }
+
+    /* ── Education image block ── */
+    .edu-img-block {
+      position: relative;
+      border-radius: var(--radius-card);
+      overflow: hidden;
+    }
+
+    .edu-img-block .img-placeholder {
+      aspect-ratio: 3/4;
+      min-height: 400px;
+    }
+
+    /* ── Partnership pillars ── */
+    .partnership-grid {
+      display: grid;
+      gap: var(--space-5);
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    }
+
+    .partnership-card {
+      padding: var(--space-5);
+      border-radius: var(--radius-card);
+      border: 1px solid rgba(250, 250, 253, 0.12);
+      background: rgba(250, 250, 253, 0.04);
+    }
+
+    .partnership-card__icon {
+      width: 40px;
+      height: 40px;
+      color: var(--color-gold);
+      margin-bottom: var(--space-3);
+    }
+
+    .partnership-card h3 {
+      color: var(--color-cream);
+      font-size: var(--fs-h3);
+      margin-bottom: var(--space-3);
+    }
+
+    .partnership-card p {
+      font-size: var(--fs-small);
+      line-height: 1.65;
+      color: rgba(250, 250, 253, 0.7);
+    }
+
+    /* ── Consulting offer ── */
+    .consulting-offer {
+      display: grid;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: start;
+    }
+
+    @media (min-width: 900px) {
+      .consulting-offer {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .consulting-who {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .who-item {
+      display: flex;
+      gap: var(--space-3);
+      align-items: flex-start;
+      padding: var(--space-4);
+      border-radius: var(--radius-card);
+      border: 1px solid rgba(23, 23, 23, 0.08);
+      background: var(--color-cream);
+    }
+
+    .who-item__icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      color: var(--color-canopy);
+    }
+
+    .who-item__body h3 {
+      font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+      margin-bottom: var(--space-2);
+    }
+
+    .who-item__body p {
+      font-size: var(--fs-small);
+      line-height: 1.65;
+      opacity: 0.75;
+    }
+
+    /* ── Pull-quote in cream sections ── */
+    .section .pull-quote--warm {
+      border-color: var(--color-gold);
+      color: var(--color-canopy);
+    }
+
+    /* ── Consulting detail list ── */
+    .help-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      margin-top: var(--space-5);
+    }
+
+    .help-list__item {
+      display: flex;
+      gap: var(--space-3);
+      align-items: center;
+      font-size: var(--fs-small);
+      line-height: 1.6;
+    }
+
+    .help-list__dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-clay);
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── HEADER ──────────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="container">
+
+      <!-- Logo -->
+      <a href="index.html" class="site-logo" aria-label="Finca de Garces — return to home">
+        <img src="assets/logo/logo-horizontal-roast.png" alt="Finca de Garces" width="855" height="106">
+      </a>
+
+      <!-- Primary navigation -->
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <ul class="site-nav__list" role="list">
+          <li><a href="index.html" class="site-nav__link">Home</a></li>
+          <li><a href="our-story.html" class="site-nav__link">Our Story</a></li>
+          <li><a href="coffee.html" class="site-nav__link">Coffee</a></li>
+          <li><a href="farm.html" class="site-nav__link">The Farm</a></li>
+          <li><a href="education.html" class="site-nav__link active" aria-current="page">Education</a></li>
+          <li><a href="awards.html" class="site-nav__link">Awards</a></li>
+          <li><a href="contact.html" class="site-nav__link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Inquire Now</a>
+      </nav>
+
+      <!-- Mobile hamburger toggle -->
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile nav overlay -->
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+  </header>
+
+  <!-- ── MAIN CONTENT ────────────────────────────────────────────────────── -->
+  <main id="main-content">
+
+    <!-- ── SECTION 1: PAGE HERO (roast bg) ──────────────────────────────── -->
+    <section class="page-hero" aria-labelledby="page-hero-heading">
+
+      <!-- Background image placeholder (roast bg as fallback) -->
+      <div
+        class="page-hero__media"
+        aria-hidden="true"
+        style="
+          position: absolute;
+          inset: 0;
+          z-index: 0;
+          overflow: hidden;
+        "
+      >
+        <picture>
+          <source srcset="assets/img/farmer-training.webp" type="image/webp">
+          <img
+            src="assets/img/farmer-training.jpg"
+            alt=""
+            width="1280"
+            height="853"
+            fetchpriority="high"
+            decoding="async"
+            style="width:100%;height:100%;object-fit:cover;opacity:0.18;"
+          >
+        </picture>
+      </div>
+
+      <div class="container" style="position: relative; z-index: 1;">
+        <p class="text-eyebrow" style="margin-bottom: var(--space-3);">Education &amp; Consulting</p>
+        <h1 id="page-hero-heading" style="max-width: 18ch;">Growing Together, One Farm at a Time.</h1>
+        <p class="text-lead" style="max-width: 52ch; margin-top: var(--space-4);">
+          Knowledge freely shared is a harvest that multiplies. At Finca de Garces, we believe great coffee can change lives&nbsp;&mdash; and that belief compels us to walk alongside every farmer who is ready to grow.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ── SECTION 2: INTRO / PURPOSE (cream) ──────────────────────────── -->
+    <section class="section" aria-labelledby="intro-heading">
+      <div class="container">
+        <div class="reveal" style="max-width: var(--text-measure);">
+          <p class="text-script" style="margin-bottom: var(--space-3);">why we teach</p>
+          <h2 id="intro-heading">Because Lifting One Farm Lifts Them All</h2>
+          <p style="margin-top: var(--space-4);">
+            Our farm was not built in isolation. From the very beginning, the Garces family has understood that the quality of Philippine specialty coffee is shaped by the cumulative knowledge, practices, and care of every farmer in these highlands. When one grower improves their post-harvest method, their harvest quality rises. When a whole community understands cherry ripeness and sorting, the region's reputation rises with it.
+          </p>
+          <p>
+            That is the spirit behind everything we teach. We do not come as experts looking down at students. We come as fellow farmers who have made mistakes, learned slowly, and been grateful for every piece of wisdom shared with us along the way. We teach because we were taught. We share because sharing is how this work endures.
+          </p>
+          <p>
+            This is not a formal academy. It is something closer to a long walk through the trees, asking questions together, watching the cherries, and figuring out what the land is telling us.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 3: FARMER EDUCATION (2-column with image) ────────────── -->
+    <section class="section" style="padding-top: 0;" aria-labelledby="education-heading">
+      <div class="container">
+
+        <div class="story-block story-block--img-right" style="display: grid; gap: clamp(3rem,6vw,6rem); align-items: center;">
+
+          <!-- Left: Text content -->
+          <div class="story-block__text reveal">
+            <p class="text-eyebrow" style="margin-bottom: var(--space-3);">Farmer Education</p>
+            <h2 id="education-heading">Specialty-Grade Practices, Shared Openly</h2>
+
+            <p style="margin-top: var(--space-4);">
+              Transitioning a farm to specialty-grade is not one decision&nbsp;&mdash; it is hundreds of small ones, made day by day, cherry by cherry. We teach those decisions. The kinds of things that are learned slowly through seasons of trial, error, and quiet observation of what works.
+            </p>
+
+            <!-- Pull quote -->
+            <blockquote class="pull-quote pull-quote--warm" style="margin: var(--space-6) 0;">
+              &ldquo;Great coffee can change lives&nbsp;&mdash; and teaching how to grow it is one of the most purposeful things we do.&rdquo;
+            </blockquote>
+
+            <!-- What we teach: pillar list -->
+            <div class="pillar-list">
+
+              <div class="pillar-item">
+                <div class="pillar-item__marker" aria-hidden="true">
+                  <!-- Leaf icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                </div>
+                <div class="pillar-item__text">
+                  <strong>Cherry Selection &amp; Ripeness</strong>
+                  Understanding what "specialty-grade" means in practice: selective picking at peak ripeness, sorting for defects, and why each cherry matters to the final cup.
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-item__marker" aria-hidden="true">
+                  <!-- Droplet / processing icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                </div>
+                <div class="pillar-item__text">
+                  <strong>Post-Harvest Processing</strong>
+                  Washed, natural, and honey methods; fermentation basics; drying on raised beds; moisture control. The practical knowledge that separates commodity from specialty.
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-item__marker" aria-hidden="true">
+                  <!-- Sun / growing icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </div>
+                <div class="pillar-item__text">
+                  <strong>Farm &amp; Soil Health</strong>
+                  Shade-grown cultivation, canopy management, soil care, composting, and sustainable practices that protect the land while improving cup quality over time.
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-item__marker" aria-hidden="true">
+                  <!-- Chart / quality icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                </div>
+                <div class="pillar-item__text">
+                  <strong>Quality Tracking &amp; Record-Keeping</strong>
+                  Simple, practical methods for tracking lots, understanding cup scores, and communicating quality to buyers. Knowledge that makes a farmer more valuable in the market.
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-item__marker" aria-hidden="true">
+                  <!-- Community / people icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="pillar-item__text">
+                  <strong>Income &amp; Market Understanding</strong>
+                  How specialty-grade pricing works, why quality investments pay back, and how to position a farm's coffee for better and more stable income.
+                </div>
+              </div>
+
+            </div><!-- /.pillar-list -->
+          </div><!-- /.story-block__text -->
+
+          <!-- Right: Image -->
+          <div class="edu-img-block reveal reveal--delay-1">
+            <picture>
+              <source srcset="assets/img/training-sorting.webp" type="image/webp">
+              <img
+                src="assets/img/training-sorting.jpg"
+                alt="Farmers at Finca de Garces learning cherry selection and sorting techniques in the Bukidnon highlands"
+                width="600"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              >
+            </picture>
+          </div>
+
+        </div><!-- /.story-block -->
+      </div><!-- /.container -->
+    </section>
+
+    <!-- ── SECTION 4: INDIGENOUS PARTNERSHIPS (canopy bg) ───────────────── -->
+    <section class="section section--canopy" aria-labelledby="indigenous-heading">
+      <div class="container">
+
+        <div class="section-header text-center reveal" style="margin-bottom: var(--space-7);">
+          <p class="text-script" style="color: var(--color-gold);">Mutual Respect, Shared Learning</p>
+          <h2 id="indigenous-heading" style="color: var(--color-cream);">Honoring the Wisdom of the Mountains</h2>
+          <p style="opacity: 0.75; margin-inline: auto; max-width: 56ch; color: var(--color-cream);">
+            The mountains above Pangantucan have been tended for generations by indigenous communities whose relationship with the land runs deeper than any modern agricultural training can fully reach. We approach these communities not as teachers, but as students.
+          </p>
+        </div>
+
+        <!-- Pull quote -->
+        <div class="reveal" style="max-width: 54ch; margin-inline: auto; margin-bottom: var(--space-8);">
+          <blockquote class="pull-quote" style="color: var(--color-cream); border-color: rgba(235,156,53,0.6); text-align: center; border-left: none; border-top: 2px solid rgba(235,156,53,0.6); padding: var(--space-5) 0 0 0;">
+            &ldquo;We grow together&nbsp;&mdash; not by bringing knowledge down from above, but by meeting in the middle, on the land we share.&rdquo;
+          </blockquote>
+        </div>
+
+        <!-- Partnership principle cards -->
+        <div class="partnership-grid">
+
+          <div class="partnership-card reveal">
+            <div class="partnership-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Handshake / open hands -->
+                <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/>
+              </svg>
+            </div>
+            <h3>Partnership, Not Prescription</h3>
+            <p>
+              We build relationships with indigenous communities on the basis of genuine respect and reciprocity. No knowledge is extracted or repackaged as our own. What is shared between us stays in the circle of those relationships.
+            </p>
+          </div>
+
+          <div class="partnership-card reveal reveal--delay-1">
+            <div class="partnership-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Mountain / terrain -->
+                <polyline points="1 20 8 8 13 14 17 10 23 20"/>
+              </svg>
+            </div>
+            <h3>Learning from the Land&rsquo;s Keepers</h3>
+            <p>
+              The highland communities of Mt. Kalatungan hold generational knowledge about the ecosystem, the seasons, the plants, and the rhythms of the mountain. This knowledge has shaped how we think about our own farm and how we treat the land we steward.
+            </p>
+          </div>
+
+          <div class="partnership-card reveal reveal--delay-2">
+            <div class="partnership-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Circle of connection / community -->
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 8v4l3 3"/>
+              </svg>
+            </div>
+            <h3>Opportunity Where It Belongs</h3>
+            <p>
+              Where there are pathways to improve livelihoods through specialty coffee, we look for ways to open those pathways to indigenous farming families&nbsp;&mdash; with their own terms, at their own pace, and in a way that honors their way of life.
+            </p>
+          </div>
+
+          <div class="partnership-card reveal reveal--delay-3">
+            <div class="partnership-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Leaf / stewardship -->
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+              </svg>
+            </div>
+            <h3>Rooted in Shared Stewardship</h3>
+            <p>
+              Our belief in stewardship of the land extends into how we engage with every community that calls this mountain home. The forest, the water, and the soil do not belong to any single farm&nbsp;&mdash; they are a shared inheritance worth protecting together.
+            </p>
+          </div>
+
+        </div><!-- /.partnership-grid -->
+
+        <!-- TODO: confirm with client the names and nature of specific indigenous community partnerships before naming them publicly -->
+
+      </div><!-- /.container -->
+    </section>
+
+    <!-- ── SECTION 5: CONSULTING OFFER (cream) ──────────────────────────── -->
+    <section class="section" aria-labelledby="consulting-heading">
+      <div class="container">
+
+        <div class="section-header reveal" style="margin-bottom: var(--space-7);">
+          <p class="text-script" style="margin-bottom: var(--space-3);">For Farmers &amp; Cooperatives</p>
+          <h2 id="consulting-heading">Consulting That Walks the Field With You</h2>
+          <p style="max-width: 56ch; margin-top: var(--space-4);">
+            Our consulting is not a course delivered from a classroom. It is a practical, honest engagement built on field visits, conversations, and the kind of patience that real improvement requires. If you are ready to grow toward specialty-grade, we are ready to grow with you.
+          </p>
+        </div>
+
+        <div class="consulting-offer">
+
+          <!-- Left: Who it is for -->
+          <div class="reveal">
+            <p class="text-eyebrow" style="margin-bottom: var(--space-5);">Who We Work With</p>
+
+            <div class="consulting-who">
+
+              <div class="who-item">
+                <div class="who-item__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Single person / individual farmer -->
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                  </svg>
+                </div>
+                <div class="who-item__body">
+                  <h3>Individual Farmers</h3>
+                  <p>
+                    Smallholder farmers in Bukidnon and the surrounding highlands who want to improve the quality of their harvest, understand specialty-grade standards, and build a farming practice they are proud of.
+                  </p>
+                </div>
+              </div>
+
+              <div class="who-item">
+                <div class="who-item__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Group / cooperative -->
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+                <div class="who-item__body">
+                  <h3>Farming Cooperatives</h3>
+                  <p>
+                    Cooperatives and farmer groups seeking to collectively elevate the quality and value of their coffee. We work at the group level&nbsp;&mdash; helping establish shared standards, post-harvest protocols, and quality culture that benefits every member.
+                  </p>
+                </div>
+              </div>
+
+              <div class="who-item">
+                <div class="who-item__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Seedling / transitioning farm -->
+                    <path d="M12 22V12"/>
+                    <path d="M17 7a5 5 0 0 0-10 0c0 5 5 10 5 10S17 12 17 7z"/>
+                  </svg>
+                </div>
+                <div class="who-item__body">
+                  <h3>Farms Transitioning to Specialty-Grade</h3>
+                  <p>
+                    Farms that are currently producing commercial-grade coffee and are ready to begin the patient, deliberate process of transitioning toward specialty. We know this journey well&nbsp;&mdash; we walked it ourselves.
+                  </p>
+                </div>
+              </div>
+
+            </div><!-- /.consulting-who -->
+          </div><!-- /left col -->
+
+          <!-- Right: What we help with + CTA -->
+          <div class="reveal reveal--delay-1">
+            <p class="text-eyebrow" style="margin-bottom: var(--space-5);">What We Help With</p>
+
+            <p>
+              Every engagement begins with listening&nbsp;&mdash; understanding your farm, your challenges, your goals. From there, we build a practical path together. Our consulting may include:
+            </p>
+
+            <ul class="help-list" role="list">
+              <li class="help-list__item">
+                <span class="help-list__dot" aria-hidden="true"></span>
+                Farm assessment and quality gap analysis
+              </li>
+              <li class="help-list__item">
+                <span class="help-list__dot" aria-hidden="true"></span>
+                On-farm cherry selection and harvesting guidance
+              </li>
+              <li class="help-list__item">
+                <span class="help-list__dot" aria-hidden="true"></span>
+                Post-harvest processing setup and protocol development
+              </li>
+              <li class="help-list__item">
+                <span class="help-list__dot" aria-hidden="true"></span>
+                Drying, milling, and storage best practices
+              </li>
+              <li class="help-list__item">
+                <span class="help-list__dot" aria-hidden="true"></span>
+                Soil health and sustainable farming practices
+              </li>
+              <li class="help-list__item">
+                <span class="help-list__dot" aria-hidden="true"></span>
+                Cup quality evaluation and feedback
+              </li>
+              <li class="help-list__item">
+                <span class="help-list__dot" aria-hidden="true"></span>
+                Market positioning and buyer relationship guidance
+              </li>
+              <li class="help-list__item">
+                <span class="help-list__dot" aria-hidden="true"></span>
+                Documentation and lot tracking systems
+              </li>
+            </ul>
+
+            <!-- Pull quote -->
+            <blockquote class="pull-quote pull-quote--warm" style="margin: var(--space-7) 0;">
+              &ldquo;We grow together&nbsp;&mdash; that is not just something we say. It is how we work.&rdquo;
+            </blockquote>
+
+            <p style="font-size: var(--fs-small); opacity: 0.75; margin-bottom: var(--space-5);">
+              Consulting engagements are tailored to each situation. Whether it is a single visit, a season-long accompaniment, or an ongoing relationship with a cooperative, we will discuss what makes sense together. Reach out to start the conversation.
+            </p>
+
+            <a href="contact.html" class="btn btn--primary">Inquire About Consulting</a>
+
+          </div><!-- /right col -->
+
+        </div><!-- /.consulting-offer -->
+
+      </div><!-- /.container -->
+    </section>
+
+    <!-- ── SECTION 6: CLOSING CTA BAND (roast bg) ───────────────────────── -->
+    <section class="section section--inverse" aria-labelledby="cta-heading">
+      <div class="container cta-band">
+        <p class="text-script" style="color: var(--color-gold);">let&rsquo;s grow together</p>
+        <h2 id="cta-heading">This is not just coffee, this is something meaningful.</h2>
+        <p>
+          Whether you are a fellow farmer, a cooperative, or a community beginning to think about specialty-grade coffee&nbsp;&mdash; our door is open. Bring your questions, your challenges, and your hope for what your farm can become.
+        </p>
+        <div style="display: flex; gap: var(--space-4); flex-wrap: wrap; justify-content: center;">
+          <a href="contact.html" class="btn btn--primary">Inquire Now</a>
+          <a href="our-story.html" class="btn btn--ghost-light">Our Story</a>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- /#main-content -->
+
+  <!-- ── FOOTER ──────────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+
+      <div class="site-footer__grid">
+
+        <!-- Col 1: Brand -->
+        <div class="site-footer__brand">
+          <a href="index.html" class="site-logo" aria-label="Finca de Garces — return to home">
+            <img src="assets/logo/logo-horizontal-cream.png" alt="Finca de Garces" width="855" height="106">
+          </a>
+          <p class="site-footer__tagline">From our family farm to your cup</p>
+          <p class="site-footer__desc">
+            A family-run specialty coffee farm nestled in the highlands of Pangantucan, Bukidnon, growing carefully processed coffee with patience, purpose, and deep respect for the land. Nationally awarded. Rooted in community.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigate -->
+        <div class="site-footer__col">
+          <h4>Navigate</h4>
+          <ul class="site-footer__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="coffee.html">Coffee</a></li>
+            <li><a href="farm.html">The Farm</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="awards.html">Awards</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Connect -->
+        <div class="site-footer__col">
+          <h4>Connect</h4>
+          <ul class="site-footer__links" role="list">
+            <li>
+              <!-- TODO: confirm email address -->
+              <a href="mailto:hello@fincadegarces.com" aria-label="Email Finca de Garces">
+                hello@fincadegarces.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/fincadegarces"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow @fincadegarces on Instagram"
+              >
+                @fincadegarces
+              </a>
+            </li>
+            <li>
+              <span>Pangantucan, Bukidnon, Philippines</span>
+            </li>
+          </ul>
+
+          <!-- Social links -->
+          <nav class="social-links" aria-label="Social media links">
+            <a
+              href="https://instagram.com/fincadegarces"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow @fincadegarces on Instagram"
+            >
+              <!-- Instagram SVG icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </nav>
+        </div>
+
+      </div><!-- /.site-footer__grid -->
+
+      <!-- Footer bottom row -->
+      <div class="site-footer__bottom">
+        <p class="site-footer__legal">
+          &copy; 2026 Finca de Garces. All rights reserved.
+          &nbsp;&middot;&nbsp;
+          <a href="contact.html" class="site-footer__legal">Inquire</a>
+        </p>
+
+        <!-- Social links repeated in bottom row -->
+        <nav class="social-links" aria-label="Social media links footer">
+          <a
+            href="https://instagram.com/fincadegarces"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow @fincadegarces on Instagram"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </nav>
+      </div><!-- /.site-footer__bottom -->
+
+    </div><!-- /.container -->
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

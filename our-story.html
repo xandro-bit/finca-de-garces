@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Our Story — Finca de Garces | Highland Coffee, Bukidnon</title>
+  <meta name="description" content="Born during the pandemic as an act of faith, Finca de Garces grew from a family's survival project into a nationally awarded specialty coffee farm in Bukidnon.">
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Our Story — Finca de Garces | Highland Coffee, Bukidnon">
+  <meta property="og:description" content="Born during the pandemic as an act of faith, Finca de Garces grew from a family's survival project into a nationally awarded specialty coffee farm in Bukidnon.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fincadegarces.com/our-story.html">
+  <meta property="og:image" content="https://fincadegarces.com/assets/img/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Story — Finca de Garces | Highland Coffee, Bukidnon">
+  <meta name="twitter:description" content="Born during the pandemic as an act of faith, Finca de Garces grew from a family's survival project into a nationally awarded specialty coffee farm in Bukidnon.">
+  <meta name="twitter:image" content="https://fincadegarces.com/assets/img/og-cover.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://fincadegarces.com/our-story.html">
+
+  <!-- JSON-LD Organization + Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "CoffeeShop"],
+        "name": "Finca de Garces",
+        "url": "https://fincadegarces.com/",
+        "sameAs": [
+          "https://instagram.com/fincadegarces"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "New Eden, Pangantucan",
+          "addressRegion": "Bukidnon",
+          "addressCountry": "Philippines"
+        },
+        "foundingDate": "2020",
+        "description": "Family-run specialty coffee farm founded in 2020 in Barangay New Eden, Pangantucan, Bukidnon, Philippines. Highland grown, carefully processed specialty coffee — green beans, roasted, and seedlings.",
+        "image": "https://fincadegarces.com/assets/img/og-cover.jpg"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://fincadegarces.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Our Story",
+            "item": "https://fincadegarces.com/our-story.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheet (Google Fonts imported within) -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Our Story page-specific styles -->
+  <style>
+    /* Story block layout — 2-col on desktop */
+    .story-block {
+      display: grid;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .story-block--img-right {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .story-block--img-left {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .story-block--img-left .story-block__media {
+        order: -1;
+      }
+    }
+
+    .story-block__text {
+      max-width: 60ch;
+    }
+
+    .story-block__text .text-eyebrow {
+      margin-bottom: var(--space-3);
+      display: block;
+    }
+
+    .story-block__text h2 {
+      margin-bottom: var(--space-5);
+    }
+
+    .story-block__text p {
+      margin-bottom: 1.25em;
+      line-height: 1.75;
+    }
+
+    .story-block__text p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    /* Image placeholder sized for story blocks */
+    .story-block__media .img-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: var(--radius-card);
+    }
+
+    /* Pull-quote — full-width centred between story blocks */
+    .pull-quote-wrap {
+      padding-block: clamp(2.5rem, 5vw, 4.5rem);
+    }
+
+    .pull-quote {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      line-height: 1.3;
+      color: var(--color-canopy);
+      border-left: 3px solid var(--color-gold);
+      padding-left: var(--space-5);
+      margin: 0 auto;
+      max-width: 62ch;
+    }
+
+    /* Page hero override — slightly taller to breathe */
+    .page-hero--story {
+      padding-top: calc(var(--header-height) + clamp(3rem, 8vw, 6rem));
+      padding-bottom: clamp(3.5rem, 8vw, 7rem);
+    }
+
+    .page-hero--story h1 {
+      max-width: 22ch;
+      margin-bottom: var(--space-5);
+    }
+
+    .page-hero--story .text-lead {
+      max-width: 58ch;
+    }
+
+    /* Closing CTA band */
+    .story-cta {
+      text-align: center;
+    }
+
+    .story-cta p {
+      margin-inline: auto;
+      opacity: 0.82;
+      margin-bottom: var(--space-6);
+    }
+
+    .story-cta .btn {
+      margin-inline: auto;
+    }
+
+    /* Light section separators */
+    .story-section {
+      padding-block: clamp(4rem, 9vw, 8rem);
+    }
+
+    .story-section + .story-section {
+      border-top: 1px solid rgba(23, 23, 23, 0.07);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── HEADER ──────────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="container">
+
+      <!-- Logo -->
+      <a href="index.html" class="site-logo" aria-label="Finca de Garces — return to home">
+        <img src="assets/logo/logo-horizontal-roast.png" alt="Finca de Garces" width="855" height="106">
+      </a>
+
+      <!-- Primary navigation -->
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <ul class="site-nav__list" role="list">
+          <li><a href="index.html" class="site-nav__link">Home</a></li>
+          <li><a href="our-story.html" class="site-nav__link active" aria-current="page">Our Story</a></li>
+          <li><a href="coffee.html" class="site-nav__link">Coffee</a></li>
+          <li><a href="farm.html" class="site-nav__link">The Farm</a></li>
+          <li><a href="education.html" class="site-nav__link">Education</a></li>
+          <li><a href="awards.html" class="site-nav__link">Awards</a></li>
+          <li><a href="contact.html" class="site-nav__link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Inquire Now</a>
+      </nav>
+
+      <!-- Mobile hamburger toggle -->
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile nav overlay -->
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+  </header>
+
+  <!-- ── MAIN CONTENT ────────────────────────────────────────────────────── -->
+  <main id="main-content">
+
+    <!-- ── PAGE HERO (roast bg) ───────────────────────────────────────────── -->
+    <section class="page-hero page-hero--story section--inverse" aria-labelledby="story-hero-heading">
+      <div class="container">
+        <p class="text-eyebrow reveal">Our Story</p>
+        <h1 id="story-hero-heading" class="reveal reveal--delay-1">Born of Resilience.<br>Rooted in Purpose.</h1>
+        <p class="text-lead reveal reveal--delay-2">
+          When uncertainty closed every other door, one family turned to the only certainty they knew&mdash;the land beneath their feet and the faith that something worthy could grow from it. This is how Finca de Garces began, and this is how it grows still: slowly, honestly, and with deep care for every hand along the way.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── STORY SECTION 1: Pandemic Origin ──────────────────────────────── -->
+    <section class="story-section" aria-labelledby="origin-heading">
+      <div class="container">
+        <div class="story-block story-block--img-right">
+
+          <!-- Text -->
+          <div class="story-block__text reveal">
+            <span class="text-eyebrow">Where it began</span>
+            <h2 id="origin-heading">A Seed Planted in Uncertainty</h2>
+            <!-- TODO: confirm founder names with client (Lito & Gemma Garces, per public reporting) -->
+            <p>
+              Founded in 2020 by Lito and Gemma Garces, Finca de Garces began not as a grand vision, but as a quiet response to uncertainty. In the middle of the pandemic, when the future felt unstable and unpredictable, it started as a simple project &mdash; a survival plan in case the world stood still longer than expected. With little experience and no clear roadmap, the family took a step into coffee farming on the slopes of Mt. Kalatungan, learning everything from the ground up.
+            </p>
+            <p>
+              The early days were far from easy. There were failed attempts, wasted effort, and moments where giving up felt like the more practical choice. But instead of walking away, they chose to stay.
+            </p>
+          </div>
+
+          <!-- Image -->
+          <div class="story-block__media reveal reveal--delay-1">
+            <picture>
+              <source srcset="assets/img/highland-misty-field.webp" type="image/webp">
+              <img src="assets/img/highland-misty-field.jpg" alt="The misty highland slopes of Mt. Kalatungan where Finca de Garces took root during the pandemic" width="1920" height="1280" fetchpriority="high" decoding="async">
+            </picture>
+          </div>
+
+        </div><!-- /.story-block -->
+      </div><!-- /.container -->
+    </section>
+
+    <!-- ── PULL QUOTE 1 ───────────────────────────────────────────────────── -->
+    <div class="pull-quote-wrap" aria-hidden="false">
+      <div class="container">
+        <blockquote class="pull-quote reveal">
+          &ldquo;Coffee was no longer just a fallback plan; it became a craft &mdash; a calling that required intention, care, and commitment.&rdquo;
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- ── STORY SECTION 2: Research & Patience ──────────────────────────── -->
+    <section class="story-section" aria-labelledby="research-heading">
+      <div class="container">
+        <div class="story-block story-block--img-left">
+
+          <!-- Image -->
+          <div class="story-block__media reveal">
+            <picture>
+              <source srcset="assets/img/hand-sorting.webp" type="image/webp">
+              <img src="assets/img/hand-sorting.jpg" alt="Careful study of coffee processing and cupping at Finca de Garces" width="900" height="600" loading="lazy" decoding="async">
+            </picture>
+          </div>
+
+          <!-- Text -->
+          <div class="story-block__text reveal reveal--delay-1">
+            <span class="text-eyebrow">The learning years</span>
+            <h2 id="research-heading">Not Rushed. Only Refined.</h2>
+            <p>
+              Through continuous research, experimentation, and patience, small signs of progress began to appear. What once felt like trial and error slowly turned into understanding. The land responded. The process made sense. And what started as a necessity began to evolve into something more meaningful. Coffee was no longer just a fallback plan; it became a craft &mdash; a calling that required intention, care, and commitment.
+            </p>
+          </div>
+
+        </div><!-- /.story-block -->
+      </div><!-- /.container -->
+    </section>
+
+    <!-- ── STORY SECTION 3: Going All In ─────────────────────────────────── -->
+    <section class="story-section" aria-labelledby="allin-heading">
+      <div class="container">
+        <div class="story-block story-block--img-right">
+
+          <!-- Text -->
+          <div class="story-block__text reveal">
+            <span class="text-eyebrow">The commitment</span>
+            <h2 id="allin-heading">Everything Into the Land</h2>
+            <p>
+              With that shift, the family made a decision to go all in. They expanded the farm, hired members of the local community, and nurtured more seedlings with a renewed sense of purpose. Every step forward was grounded in the same values that carried them through the beginning: resilience, patience, and a deep respect for the process.
+            </p>
+          </div>
+
+          <!-- Image -->
+          <div class="story-block__media reveal reveal--delay-1">
+            <picture>
+              <source srcset="assets/img/coffee-field-rows.webp" type="image/webp">
+              <img src="assets/img/coffee-field-rows.jpg" alt="Rows of coffee across the expanding Finca de Garces farm in the Bukidnon highlands" width="1920" height="1280" loading="lazy" decoding="async">
+            </picture>
+          </div>
+
+        </div><!-- /.story-block -->
+      </div><!-- /.container -->
+    </section>
+
+    <!-- ── PULL QUOTE 2 ───────────────────────────────────────────────────── -->
+    <div class="pull-quote-wrap" aria-hidden="false">
+      <div class="container">
+        <blockquote class="pull-quote reveal">
+          &ldquo;Every harvest carries the weight of its journey, and every cup reflects a belief that when something is built with care, it becomes a story worth sharing beyond borders.&rdquo;
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- ── STORY SECTION 4: Indigenous Community Wisdom ──────────────────── -->
+    <section class="story-section" aria-labelledby="community-heading">
+      <div class="container">
+        <div class="story-block story-block--img-left">
+
+          <!-- Image -->
+          <div class="story-block__media reveal">
+            <picture>
+              <source srcset="assets/img/highland-terraces.webp" type="image/webp">
+              <img src="assets/img/highland-terraces.jpg" alt="The terraced highland slopes of the Mt. Kalatungan range, cared for by its communities for generations" width="853" height="1280" loading="lazy" decoding="async">
+            </picture>
+          </div>
+
+          <!-- Text -->
+          <div class="story-block__text reveal reveal--delay-1">
+            <span class="text-eyebrow">Learning together</span>
+            <h2 id="community-heading">The Knowledge the Mountain Already Held</h2>
+            <p>
+              Backed by the support and wisdom of indigenous communities, Finca de Garces grew not just in size but in identity &mdash; a family-run endeavor built on hard lessons, shared knowledge, and steady growth.
+            </p>
+          </div>
+
+        </div><!-- /.story-block -->
+      </div><!-- /.container -->
+    </section>
+
+    <!-- ── STORY SECTION 5: Stewardship Today ────────────────────────────── -->
+    <section class="story-section" aria-labelledby="stewardship-heading">
+      <div class="container">
+        <div class="story-block story-block--img-right">
+
+          <!-- Text -->
+          <div class="story-block__text reveal">
+            <span class="text-eyebrow">How we farm today</span>
+            <h2 id="stewardship-heading">Stewarded, Not Just Grown</h2>
+            <p>
+              Their approach to farming goes beyond production. It is rooted in sustainability, regenerative practices, and a deep respect for the natural habitat that sustains their craft. They believe in giving back to the land just as much as they give to people &mdash; nurturing the soil, preserving the ecosystem, and ensuring that every harvest contributes to the future of the land, not just the present. This commitment reflects a mindset that coffee is not simply grown, but stewarded with care and responsibility.
+            </p>
+          </div>
+
+          <!-- Image -->
+          <div class="story-block__media reveal reveal--delay-1">
+            <picture>
+              <source srcset="assets/img/highland-hills-lush.webp" type="image/webp">
+              <img src="assets/img/highland-hills-lush.jpg" alt="Sustainable regenerative farming practices at Finca de Garces, Bukidnon highlands" width="1280" height="853" loading="lazy" decoding="async">
+            </picture>
+          </div>
+
+        </div><!-- /.story-block -->
+      </div><!-- /.container -->
+    </section>
+
+    <!-- ── PULL QUOTE 3 ───────────────────────────────────────────────────── -->
+    <div class="pull-quote-wrap" aria-hidden="false">
+      <div class="container">
+        <blockquote class="pull-quote reveal">
+          &ldquo;Coffee is not simply grown, but stewarded with care and responsibility.&rdquo;
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- ── STORY SECTION 6: Recognition & Forward ────────────────────────── -->
+    <section class="story-section" aria-labelledby="recognition-heading">
+      <div class="container">
+        <div class="story-block story-block--img-left">
+
+          <!-- Image -->
+          <div class="story-block__media reveal">
+            <picture>
+              <source srcset="assets/img/farmer-with-harvest.webp" type="image/webp">
+              <img src="assets/img/farmer-with-harvest.jpg" alt="A Finca de Garces farmer with a harvest of specialty coffee, Bukidnon highlands" width="853" height="1280" loading="lazy" decoding="async">
+            </picture>
+          </div>
+
+          <!-- Text -->
+          <div class="story-block__text reveal reveal--delay-1">
+            <span class="text-eyebrow">Recognized &amp; still growing</span>
+            <h2 id="recognition-heading">The Cup That Started a Conversation</h2>
+            <p>
+              Today, Finca de Garces stands as more than a coffee farm. It represents a way of doing things differently. While their coffee is produced at scale, it is never rushed. Every bean is given the time, care, and attention it deserves, proving that growth does not have to come at the expense of quality. Beyond cultivation, the family is deeply committed to education &mdash; sharing their knowledge with fellow coffee farmers and enthusiasts who are equally passionate about the craft. Their dedication has been recognized on the national stage through three consecutive years at the Philippine Coffee Quality Competition &mdash; Best Arabica and Best Natural Processed Arabica in 2023, and the country&rsquo;s Top 1 Arabica Estate Farm in 2025 &mdash; a testament to the excellence that comes from persistence and discipline.
+            </p>
+            <!-- Awards verified from public reporting (Good Cup PH; SunStar). Confirm full details with client. -->
+            <p>
+              Yet even as they reach new heights, they remain grounded. Grounded in their values, their culture, and their identity as a family. Grounded excellence defines who they are, no matter how high the elevation of their farms or how far their coffee travels. What began as a survival plan is now a growing movement to bring Filipino coffee to the world stage, carrying with it a story of resilience, stewardship, and purpose.
+            </p>
+            <p>
+              <a href="awards.html" class="btn btn--ghost">See the Awards</a>
+            </p>
+          </div>
+
+        </div><!-- /.story-block -->
+      </div><!-- /.container -->
+    </section>
+
+    <!-- ── CLOSING CTA BAND (roast bg) ───────────────────────────────────── -->
+    <section class="section section--inverse story-cta" aria-labelledby="story-cta-heading">
+      <div class="container cta-band">
+        <p class="text-script">become part of this story</p>
+        <h2 id="story-cta-heading">This is not just coffee, this is something meaningful.</h2>
+        <p>
+          Whether you are a specialty roaster searching for a source you can believe in, a caf&eacute; owner who wants provenance on every pour, a fellow farmer ready to grow with someone who has walked this road&mdash;or simply a person who cares about the story behind the cup: we would love to hear from you.
+        </p>
+        <div class="flex flex--center" style="justify-content: center; gap: var(--space-4); flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn--primary">Inquire Now</a>
+          <a href="coffee.html" class="btn btn--ghost-light">Explore Our Coffee</a>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- /#main-content -->
+
+  <!-- ── FOOTER ──────────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+
+      <div class="site-footer__grid">
+
+        <!-- Col 1: Brand -->
+        <div class="site-footer__brand">
+          <a href="index.html" class="site-logo" aria-label="Finca de Garces — return to home">
+            <img src="assets/logo/logo-horizontal-cream.png" alt="Finca de Garces" width="855" height="106">
+          </a>
+          <p class="site-footer__tagline">From our family farm to your cup</p>
+          <p class="site-footer__desc">
+            A family-run specialty coffee farm nestled in the highlands of Pangantucan, Bukidnon, growing carefully processed coffee with patience, purpose, and deep respect for the land. Nationally awarded. Rooted in community.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigate -->
+        <div class="site-footer__col">
+          <h4>Navigate</h4>
+          <ul class="site-footer__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="coffee.html">Coffee</a></li>
+            <li><a href="farm.html">The Farm</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="awards.html">Awards</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Connect -->
+        <div class="site-footer__col">
+          <h4>Connect</h4>
+          <ul class="site-footer__links" role="list">
+            <li>
+              <!-- TODO: confirm email address with client -->
+              <a href="mailto:hello@fincadegarces.com" aria-label="Email Finca de Garces">
+                hello@fincadegarces.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/fincadegarces"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow @fincadegarces on Instagram"
+              >
+                @fincadegarces
+              </a>
+            </li>
+            <li>
+              <span>Pangantucan, Bukidnon, Philippines</span>
+            </li>
+          </ul>
+
+          <!-- Social links -->
+          <nav class="social-links" aria-label="Social media links">
+            <a
+              href="https://instagram.com/fincadegarces"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow @fincadegarces on Instagram"
+            >
+              <!-- Instagram SVG icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </nav>
+        </div>
+
+      </div><!-- /.site-footer__grid -->
+
+      <!-- Footer bottom row -->
+      <div class="site-footer__bottom">
+        <p class="site-footer__legal">
+          &copy; 2026 Finca de Garces. All rights reserved.
+          &nbsp;&middot;&nbsp;
+          <a href="contact.html" class="site-footer__legal">Inquire</a>
+        </p>
+
+        <!-- Social links repeated in bottom row -->
+        <nav class="social-links" aria-label="Social media links footer">
+          <a
+            href="https://instagram.com/fincadegarces"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow @fincadegarces on Instagram"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </nav>
+      </div><!-- /.site-footer__bottom -->
+
+    </div><!-- /.container -->
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

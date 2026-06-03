@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Specialty Coffee &mdash; Finca de Garces | Green Beans, Roasted, Seedlings</title>
+  <meta name="description" content="Finca de Garces highland specialty coffee from Bukidnon — Bourbon, Typica, Catimor, Sarchimor, and an Ethiopian-landrace "Sweet Coffee." Specialty-grade green beans, small-batch roasted, and seedlings, in natural, honey, and Full Moon processes.">
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Specialty Coffee &mdash; Finca de Garces | Green Beans, Roasted, Seedlings">
+  <meta property="og:description" content="Finca de Garces highland specialty coffee from Bukidnon — Bourbon, Typica, Catimor, Sarchimor, and an Ethiopian-landrace "Sweet Coffee." Specialty-grade green beans, small-batch roasted, and seedlings, in natural, honey, and Full Moon processes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fincadegarces.com/coffee.html">
+  <meta property="og:image" content="https://fincadegarces.com/assets/img/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Specialty Coffee &mdash; Finca de Garces | Green Beans, Roasted, Seedlings">
+  <meta name="twitter:description" content="Finca de Garces highland specialty coffee from Bukidnon — Bourbon, Typica, Catimor, Sarchimor, and an Ethiopian-landrace "Sweet Coffee." Specialty-grade green beans, small-batch roasted, and seedlings, in natural, honey, and Full Moon processes.">
+  <meta name="twitter:image" content="https://fincadegarces.com/assets/img/og-cover.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://fincadegarces.com/coffee.html">
+
+  <!-- JSON-LD Product / Offer Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Finca de Garces Coffee Offerings",
+    "description": "Specialty-grade coffee offerings from Finca de Garces — a highland farm in Pangantucan, Bukidnon, Philippines.",
+    "url": "https://fincadegarces.com/coffee.html",
+    "image": "https://fincadegarces.com/assets/img/og-cover.jpg",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Specialty-Grade Green Beans",
+        "description": "Highland-grown, carefully processed specialty-grade green coffee beans from Pangantucan, Bukidnon. Available for specialty roasters."
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Small-Batch Roasted Coffee",
+        "description": "Small-batch roasted to highlight the origin character of Bukidnon highland coffee. Available for cafes and enthusiasts."
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Experimental Coffee Seedlings",
+        "description": "Carefully nursed experimental coffee seedling varieties available to farmers ready to grow specialty coffee with purpose."
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Coffee-page scoped styles: variety/process/tasting specs -->
+  <style>
+    .coffee-specs {
+      margin: var(--space-5) 0;
+      display: grid;
+      gap: var(--space-4);
+      padding: var(--space-4) 0;
+      border-top: 1px solid rgba(23, 23, 23, 0.1);
+      border-bottom: 1px solid rgba(23, 23, 23, 0.1);
+    }
+    .spec-row { display: block; }
+    .spec-label {
+      font-family: var(--font-body);
+      font-size: var(--fs-small);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-canopy);
+      margin: 0 0 var(--space-2);
+    }
+    .spec-value {
+      font-size: var(--fs-small);
+      line-height: 1.65;
+      opacity: 0.82;
+      margin: 0;
+      max-width: 56ch;
+    }
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .tag {
+      font-size: var(--fs-small);
+      padding: 0.35em 0.9em;
+      border: 1px solid rgba(10, 60, 48, 0.28);
+      border-radius: 999px;
+      color: var(--color-canopy);
+      background: rgba(10, 60, 48, 0.04);
+      white-space: nowrap;
+    }
+    .notes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
+      gap: var(--space-3);
+    }
+    .note-card {
+      border-left: 2px solid var(--color-gold);
+      padding-left: var(--space-3);
+    }
+    .note-card__name {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: var(--fs-small);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--color-sienna);
+      margin: 0 0 0.2em;
+    }
+    .note-card__notes {
+      font-size: var(--fs-small);
+      opacity: 0.8;
+      margin: 0;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── HEADER ──────────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="container">
+
+      <!-- Logo -->
+      <a href="index.html" class="site-logo" aria-label="Finca de Garces &mdash; return to home">
+        <img src="assets/logo/logo-horizontal-roast.png" alt="Finca de Garces" width="855" height="106">
+      </a>
+
+      <!-- Primary navigation -->
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <ul class="site-nav__list" role="list">
+          <li><a href="index.html" class="site-nav__link">Home</a></li>
+          <li><a href="our-story.html" class="site-nav__link">Our Story</a></li>
+          <li><a href="coffee.html" class="site-nav__link active" aria-current="page">Coffee</a></li>
+          <li><a href="farm.html" class="site-nav__link">The Farm</a></li>
+          <li><a href="education.html" class="site-nav__link">Education</a></li>
+          <li><a href="awards.html" class="site-nav__link">Awards</a></li>
+          <li><a href="contact.html" class="site-nav__link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Inquire Now</a>
+      </nav>
+
+      <!-- Mobile hamburger toggle -->
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile nav overlay -->
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+  </header>
+
+  <!-- ── MAIN CONTENT ────────────────────────────────────────────────────── -->
+  <main id="main-content">
+
+    <!-- ── SECTION 1: HERO ───────────────────────────────────────────────── -->
+    <section class="hero hero--inner hero--roast" aria-labelledby="coffee-hero-heading">
+
+      <!-- Hero media -->
+      <div class="hero__media">
+        <picture>
+          <source srcset="assets/img/cherries-red-branch.webp" type="image/webp">
+          <img src="assets/img/cherries-red-branch.jpg" alt="Coffee cherries ripening on the branch at Finca de Garces, on the slopes of Mt. Kalatungan" width="1280" height="853" fetchpriority="high" decoding="async">
+        </picture>
+      </div>
+
+      <!-- Gradient scrim -->
+      <div class="hero__scrim" aria-hidden="true"></div>
+
+      <!-- Hero text -->
+      <div class="hero__content">
+        <p class="text-eyebrow hero__eyebrow">Specialty Coffee</p>
+        <h1 class="hero__title" id="coffee-hero-heading">Carefully Grown,<br>Patiently Processed.</h1>
+        <p class="hero__tagline">Three offerings. One story of patience and purpose.</p>
+      </div>
+
+    </section>
+
+    <!-- ── SECTION 2: COFFEE INTRO ────────────────────────────────────────── -->
+    <section class="section" aria-labelledby="coffee-intro-heading">
+      <div class="container">
+        <div class="text-center text-measure reveal">
+          <p class="text-script">what makes it different</p>
+          <h2 id="coffee-intro-heading">The land speaks through every bean.</h2>
+          <p class="text-lead">
+            Specialty coffee is never accidental. It is the result of the right variety, grown in the right place, tended by hands that understand what patience and care make possible. At Finca de Garces, our coffee begins in the highlands of Pangantucan, Bukidnon &mdash; nestled in the shadow of Mt. Kalatungan at an elevation that slows the cherry's ripening, concentrating sugars and building layers of flavor that flat-grown coffee simply cannot produce.
+          </p>
+          <p>
+            Bukidnon's cool nights, generous rainfall, and rich volcanic soil are not incidental gifts &mdash; they are the terroir we steward every season. We farm slowly, harvest selectively, and process with as much care as we give the growing itself. The result is coffee that is clean, complex, and honest: a true expression of this highland place, not a product engineered to satisfy a trend.
+          </p>
+          <p>
+            We offer three things: green beans for roasters who want to work with traceable, highland-grown specialty coffee; small-batch roasted coffee for those who prefer it ready; and seedlings for farmers who are ready to begin their own journey toward quality. Each offering is an invitation to a longer conversation about this farm and the work behind it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 3: GREEN BEANS ─────────────────────────────────────────── -->
+    <section class="section" id="green-beans" aria-labelledby="green-beans-heading">
+      <div class="container">
+
+        <div class="story-block">
+
+          <!-- Image: left -->
+          <div class="story-block__media reveal">
+            <picture>
+              <source srcset="assets/img/green-beans-sorting.webp" type="image/webp">
+              <img src="assets/img/green-beans-sorting.jpg" alt="Specialty-grade green coffee beans from Finca de Garces after careful processing" width="900" height="600" loading="lazy" decoding="async">
+            </picture>
+          </div>
+
+          <!-- Text: right -->
+          <div class="story-block__body reveal reveal--delay-1">
+            <span class="text-eyebrow">For Roasters</span>
+            <h2 id="green-beans-heading">Green Beans</h2>
+            <p class="text-lead-sm">
+              Highland grown. Selectively harvested. Built for the discerning roaster.
+            </p>
+            <p>
+              Our green beans leave the farm as close to their natural complexity as careful processing allows. We harvest by hand, selecting only cherries at peak ripeness &mdash; the result of years of learning to read the fruit the way this mountain grows it. Each lot is processed with patience &mdash; washed, honey, natural, or our signature Full Moon natural &mdash; and rested until it is genuinely ready.
+            </p>
+            <p>
+              The flavor profile of Bukidnon highland coffee reflects its origins: the cool, unhurried growing season, the volcanic soil, the altitude. As a roaster, you receive a canvas already doing much of the work &mdash; a bean with structural integrity, consistent moisture, and genuine terroir character.
+            </p>
+
+            <!-- Specs verified from public reporting (Good Cup PH). Confirm current-season lots with client. -->
+            <div class="coffee-specs">
+              <div class="spec-row">
+                <p class="spec-label">Varieties Grown</p>
+                <ul class="tag-list" role="list">
+                  <li class="tag">Bourbon</li>
+                  <li class="tag">Sarchimor</li>
+                  <li class="tag">Typica</li>
+                  <li class="tag">Catimor</li>
+                  <li class="tag">&ldquo;Sweet Coffee&rdquo; &middot; Ethiopian landrace</li>
+                </ul>
+              </div>
+              <div class="spec-row">
+                <p class="spec-label">Processing Methods</p>
+                <ul class="tag-list" role="list">
+                  <li class="tag">Washed</li>
+                  <li class="tag">Natural</li>
+                  <li class="tag">Honey</li>
+                  <li class="tag">Full Moon Natural</li>
+                  <li class="tag">Carbonic</li>
+                </ul>
+              </div>
+              <div class="spec-row">
+                <p class="spec-label">Elevation</p>
+                <p class="spec-value">1,300&ndash;1,400 MASL &middot; the slopes of Mt. Kalatungan, Pangantucan, Bukidnon</p>
+              </div>
+              <div class="spec-row">
+                <p class="spec-label">Tasting Notes by Process</p>
+                <div class="notes-grid">
+                  <div class="note-card">
+                    <p class="note-card__name">Natural</p>
+                    <p class="note-card__notes">Dark chocolate, green apple, durian, mangosteen</p>
+                  </div>
+                  <div class="note-card">
+                    <p class="note-card__name">Honey</p>
+                    <p class="note-card__notes">Honey, orange, chamomile, grapes</p>
+                  </div>
+                  <div class="note-card">
+                    <p class="note-card__name">Full Moon Natural</p>
+                    <p class="note-card__notes">Kiwi, mandarin orange, orange blossom, honey</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p>
+              We work with roasters who share our belief that traceability is not a marketing feature &mdash; it is a mark of respect for the people who grew the coffee and the community it supports. We are glad to share the story of each lot, the processing method, and the practices behind it.
+            </p>
+
+            <a href="contact.html" class="btn btn--primary">Inquire About Green Beans</a>
+          </div>
+
+        </div><!-- /.story-block -->
+      </div><!-- /.container -->
+    </section>
+
+    <!-- ── DIVIDER ─────────────────────────────────────────────────────────── -->
+    <div class="divider divider--gold" role="separator" aria-hidden="true"></div>
+
+    <!-- ── SECTION 4: ROASTED COFFEE ─────────────────────────────────────── -->
+    <section class="section" id="roasted" aria-labelledby="roasted-heading">
+      <div class="container">
+
+        <div class="story-block story-block--reverse">
+
+          <!-- Image: right (reversed) -->
+          <div class="story-block__media reveal reveal--delay-1">
+            <picture>
+              <source srcset="assets/img/brewed-coffee.webp" type="image/webp">
+              <img src="assets/img/brewed-coffee.jpg" alt="A freshly brewed cup of Finca de Garces highland coffee" width="1280" height="853" loading="lazy" decoding="async">
+            </picture>
+          </div>
+
+          <!-- Text: left -->
+          <div class="story-block__body reveal">
+            <span class="text-eyebrow">For Caf&eacute;s &amp; Enthusiasts</span>
+            <h2 id="roasted-heading">Roasted Coffee</h2>
+            <p class="text-lead-sm">
+              Small-batch roasted to let the origin speak, not the process.
+            </p>
+            <p>
+              When we roast, our one intention is clarity. We want the character of the bean &mdash; built into it over months of growing, harvesting, and processing &mdash; to arrive in your cup as faithfully as possible. We roast in small batches, carefully, unhurried, calibrating each lot to its own particular qualities rather than forcing every bean through the same profile.
+            </p>
+            <p>
+              The result is a coffee with warmth and depth that reflects the highlands it came from: not sharp, not hollow, but honest. There is a roundness in a well-grown Bukidnon bean that small-batch roasting preserves rather than obscures, and that is what we work toward with every roast.
+            </p>
+
+            <!-- Cup profile from our 2025 PCQC lot (Good Cup PH / SunStar). Confirm per-roast notes with client. -->
+            <div class="coffee-specs">
+              <div class="spec-row">
+                <p class="spec-label">Cup Profile</p>
+                <p class="spec-value">Caramel, orange-peel zest, floral notes, a nutty depth, and a clean, tea-like finish &mdash; the descriptors our highland lot earned on the national stage in 2025.</p>
+              </div>
+            </div>
+
+            <p>
+              We offer roasted coffee to caf&eacute;s looking for a single-origin Bukidnon option with a story they can share, and to enthusiasts who want something grown with genuine intention. Like everything on this farm, it is made to be savored &mdash; not rushed.
+            </p>
+
+            <a href="contact.html" class="btn btn--primary">Inquire About Roasted Coffee</a>
+          </div>
+
+        </div><!-- /.story-block -->
+      </div><!-- /.container -->
+    </section>
+
+    <!-- ── DIVIDER ─────────────────────────────────────────────────────────── -->
+    <div class="divider divider--gold" role="separator" aria-hidden="true"></div>
+
+    <!-- ── SECTION 5: SEEDLINGS ───────────────────────────────────────────── -->
+    <section class="section" id="seedlings" aria-labelledby="seedlings-heading">
+      <div class="container">
+
+        <div class="story-block">
+
+          <!-- Image: left -->
+          <div class="story-block__media reveal">
+            <picture>
+              <source srcset="assets/img/seedling-nursery.webp" type="image/webp">
+              <img src="assets/img/seedling-nursery.jpg" alt="Young coffee seedlings carefully tended in the Finca de Garces nursery, Pangantucan, Bukidnon" width="1280" height="853" loading="lazy" decoding="async">
+            </picture>
+          </div>
+
+          <!-- Text: right -->
+          <div class="story-block__body reveal reveal--delay-1">
+            <span class="text-eyebrow">Experimental Program &middot; For Farmers</span>
+            <h2 id="seedlings-heading">Seedlings</h2>
+            <p class="text-lead-sm">
+              The beginning of every great coffee is a seed tended with care.
+            </p>
+            <p>
+              Our seedling program is where curiosity lives on this farm. We work with experimental varieties, studying how different genetics respond to our highland environment &mdash; watching how each plant develops, how it handles the altitude, the soil, the season. It is slow, methodical work without guaranteed outcomes, and that is precisely why we find it meaningful.
+            </p>
+            <p>
+              Not every variety we trial will make it into production. But the ones that do have earned their place through observation and patience, not assumption. We nursery our seedlings carefully, giving each plant the conditions and attention it needs to reach healthy, viable growth before it ever leaves this farm.
+            </p>
+            <p>
+              We make seedlings available to farmers who are genuinely ready to grow specialty coffee with intention. If you are a farmer thinking seriously about the quality side of your crop &mdash; the varieties, the practices, the potential of your land &mdash; we would like to talk. We do not just hand over a seedling; we want to understand your context and grow alongside you.
+            </p>
+
+            <!-- Genetics verified via World Coffee Research DNA testing (Good Cup PH). Confirm available varieties per season with client. -->
+            <div class="coffee-specs">
+              <div class="spec-row">
+                <p class="spec-label">Varieties We Trial</p>
+                <ul class="tag-list" role="list">
+                  <li class="tag">Bourbon</li>
+                  <li class="tag">Sarchimor</li>
+                  <li class="tag">Typica</li>
+                  <li class="tag">Catimor</li>
+                  <li class="tag">&ldquo;Sweet Coffee&rdquo;</li>
+                </ul>
+              </div>
+              <div class="spec-row">
+                <p class="spec-label">Ethiopian Genetics</p>
+                <p class="spec-value">Our &ldquo;Sweet Coffee&rdquo; traces back to an Ethiopian heirloom landrace &mdash; confirmed through World Coffee Research DNA testing &mdash; prized for its resilience, flavor complexity, and adaptability to our highland climate. Tasted blind, it is clean enough to be mistaken for an Ethiopian origin.</p>
+              </div>
+            </div>
+
+            <a href="contact.html" class="btn btn--primary">Connect With Us</a>
+          </div>
+
+        </div><!-- /.story-block -->
+      </div><!-- /.container -->
+    </section>
+
+    <!-- ── SECTION 6: CLOSING CTA BAND ───────────────────────────────────── -->
+    <section class="section section--canopy" aria-labelledby="coffee-cta-heading">
+      <div class="container cta-band reveal">
+        <p class="text-script">let&rsquo;s connect</p>
+        <h2 id="coffee-cta-heading">The land speaks through every bean.</h2>
+        <p>
+          Whether you are a specialty roaster looking for a highland Philippine origin, a caf&eacute; seeking something with an honest story, or a farmer ready to grow quality coffee &mdash; we would love to hear from you. Every inquiry is answered by the people who actually tend this farm.
+        </p>
+        <a href="contact.html" class="btn btn--primary">Inquire Now</a>
+      </div>
+    </section>
+
+  </main><!-- /#main-content -->
+
+  <!-- ── FOOTER ──────────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+
+      <div class="site-footer__grid">
+
+        <!-- Col 1: Brand -->
+        <div class="site-footer__brand">
+          <a href="index.html" class="site-logo" aria-label="Finca de Garces &mdash; return to home">
+            <img src="assets/logo/logo-horizontal-cream.png" alt="Finca de Garces" width="855" height="106">
+          </a>
+          <p class="site-footer__tagline">From our family farm to your cup</p>
+          <p class="site-footer__desc">
+            A family-run specialty coffee farm nestled in the highlands of Pangantucan, Bukidnon, growing carefully processed coffee with patience, purpose, and deep respect for the land. Nationally awarded. Rooted in community.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigate -->
+        <div class="site-footer__col">
+          <h4>Navigate</h4>
+          <ul class="site-footer__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="coffee.html">Coffee</a></li>
+            <li><a href="farm.html">The Farm</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="awards.html">Awards</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Connect -->
+        <div class="site-footer__col">
+          <h4>Connect</h4>
+          <ul class="site-footer__links" role="list">
+            <li>
+              <!-- TODO: confirm email address with client -->
+              <a href="mailto:hello@fincadegarces.com" aria-label="Email Finca de Garces">
+                hello@fincadegarces.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/fincadegarces"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow @fincadegarces on Instagram"
+              >
+                @fincadegarces
+              </a>
+            </li>
+            <li>
+              <span>Pangantucan, Bukidnon, Philippines</span>
+            </li>
+          </ul>
+
+          <!-- Social links -->
+          <nav class="social-links" aria-label="Social media links">
+            <a
+              href="https://instagram.com/fincadegarces"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow @fincadegarces on Instagram"
+            >
+              <!-- Instagram SVG icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </nav>
+        </div>
+
+      </div><!-- /.site-footer__grid -->
+
+      <!-- Footer bottom row -->
+      <div class="site-footer__bottom">
+        <p class="site-footer__legal">
+          &copy; 2026 Finca de Garces. All rights reserved.
+          &nbsp;&middot;&nbsp;
+          <a href="contact.html" class="site-footer__legal">Inquire</a>
+        </p>
+
+        <nav class="social-links" aria-label="Social media links footer">
+          <a
+            href="https://instagram.com/fincadegarces"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow @fincadegarces on Instagram"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </nav>
+      </div><!-- /.site-footer__bottom -->
+
+    </div><!-- /.container -->
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

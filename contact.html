@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Contact &amp; Inquire &mdash; Finca de Garces | Specialty Coffee Farm, Bukidnon</title>
+  <meta name="description" content="Get in touch with Finca de Garces. Whether you're a specialty roaster, café owner, fellow farmer, or coffee lover — reach out for inquiries about our highland-grown Bukidnon specialty coffee.">
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact &amp; Inquire — Finca de Garces | Specialty Coffee Farm, Bukidnon">
+  <meta property="og:description" content="Get in touch with Finca de Garces. Whether you're a specialty roaster, café owner, fellow farmer, or coffee lover — reach out for inquiries about our highland-grown Bukidnon specialty coffee.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fincadegarces.com/contact.html">
+  <meta property="og:image" content="https://fincadegarces.com/assets/img/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact &amp; Inquire — Finca de Garces | Specialty Coffee Farm, Bukidnon">
+  <meta name="twitter:description" content="Get in touch with Finca de Garces. Whether you're a specialty roaster, café owner, fellow farmer, or coffee lover — reach out for inquiries about our highland-grown Bukidnon specialty coffee.">
+  <meta name="twitter:image" content="https://fincadegarces.com/assets/img/og-cover.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://fincadegarces.com/contact.html">
+
+  <!-- JSON-LD Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "CoffeeShop"],
+    "name": "Finca de Garces",
+    "url": "https://fincadegarces.com/",
+    "sameAs": [
+      "https://instagram.com/fincadegarces"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "New Eden, Pangantucan",
+      "addressRegion": "Bukidnon",
+      "addressCountry": "Philippines"
+    },
+    "foundingDate": "2020",
+    "description": "Family-run specialty coffee farm in Barangay New Eden, Pangantucan, Bukidnon, Philippines. Highland grown, carefully processed specialty coffee — green beans, roasted, and seedlings.",
+    "image": "https://fincadegarces.com/assets/img/og-cover.jpg"
+  }
+  </script>
+
+  <!-- Google Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheet (Google Fonts imported within) -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* ── Contact page–specific styles ──────────────────────────────────────── */
+
+    /* Page Hero — roast background */
+    .page-hero {
+      background-color: var(--color-roast);
+      color: var(--color-cream);
+      padding: clamp(5rem, 12vw, 10rem) 0 clamp(4rem, 8vw, 7rem);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle mountain line watermark behind hero text */
+    .page-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300' preserveAspectRatio='xMidYMid slice'%3E%3Cpolyline points='0,280 200,180 380,230 550,100 720,160 880,60 1050,140 1200,80 1200,300 0,300' fill='none' stroke='%23FAFAFD' stroke-width='1.5' opacity='0.06'/%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: center bottom;
+      pointer-events: none;
+    }
+
+    .page-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-hero__eyebrow {
+      font-family: var(--font-script);
+      font-size: 1.25rem;
+      color: var(--color-gold);
+      letter-spacing: 0.02em;
+      margin-bottom: var(--space-3);
+      display: block;
+    }
+
+    .page-hero__title {
+      font-family: var(--font-display);
+      font-size: var(--fs-h1);
+      color: var(--color-cream);
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      max-width: 18ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .page-hero__lead {
+      font-family: var(--font-body);
+      font-size: var(--fs-body);
+      color: var(--color-cream);
+      opacity: 0.8;
+      max-width: 54ch;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── Contact section ──────────────────────────────────────────────────── */
+    .contact-section {
+      background-color: var(--color-cream);
+      padding: clamp(4rem, 10vw, 9rem) 0;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(3rem, 6vw, 5rem);
+      align-items: start;
+    }
+
+    @media (min-width: 860px) {
+      .contact-layout {
+        grid-template-columns: 55fr 45fr;
+        gap: clamp(4rem, 6vw, 6rem);
+      }
+    }
+
+    /* ── Form column ──────────────────────────────────────────────────────── */
+    .contact-form-col {}
+
+    .contact-form-col__heading {
+      font-family: var(--font-display);
+      font-size: var(--fs-h2);
+      color: var(--color-roast);
+      line-height: 1.15;
+      margin: 0 0 var(--space-2);
+    }
+
+    .contact-form-col__sub {
+      font-family: var(--font-script);
+      font-size: 1.125rem;
+      color: var(--color-field);
+      margin: 0 0 var(--space-4);
+    }
+
+    /* Form groups */
+    .form-group {
+      margin-bottom: var(--space-4);
+    }
+
+    .form-group label {
+      display: block;
+      font-family: var(--font-body);
+      font-size: var(--fs-small);
+      font-weight: 600;
+      color: var(--color-roast);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-1);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      display: block;
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--color-roast);
+      background-color: #fff;
+      border: 1.5px solid #D8D6CC;
+      border-radius: 4px;
+      padding: 0.75rem 1rem;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+      line-height: 1.5;
+      box-sizing: border-box;
+    }
+
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23171717' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.85rem center;
+      background-size: 1rem;
+      padding-right: 2.5rem;
+      cursor: pointer;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 8rem;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--color-canopy);
+      box-shadow: 0 0 0 3px rgba(10, 60, 48, 0.12);
+    }
+
+    /* Validation states */
+    .form-group input[aria-invalid="true"],
+    .form-group select[aria-invalid="true"],
+    .form-group textarea[aria-invalid="true"] {
+      border-color: var(--color-sienna);
+      box-shadow: 0 0 0 3px rgba(189, 48, 16, 0.1);
+    }
+
+    /* Inline error message */
+    .form__error {
+      display: none;
+      font-family: var(--font-body);
+      font-size: var(--fs-small);
+      color: var(--color-sienna);
+      margin-top: 0.375rem;
+    }
+
+    .form__error[aria-live] {
+      display: block; /* always in DOM, shown via JS */
+    }
+
+    /* Two-column row */
+    .form__row--2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-3);
+    }
+
+    @media (min-width: 560px) {
+      .form__row--2 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* Form feedback banner */
+    .form-feedback {
+      display: none;
+      padding: 1rem 1.25rem;
+      border-radius: 4px;
+      font-family: var(--font-body);
+      font-size: var(--fs-small);
+      margin-bottom: var(--space-4);
+      line-height: 1.5;
+    }
+
+    .form-feedback--success {
+      background-color: #EBF5EE;
+      border: 1.5px solid #5A9E6A;
+      color: #1E5C2A;
+    }
+
+    .form-feedback--error {
+      background-color: #FAEAE7;
+      border: 1.5px solid var(--color-sienna);
+      color: var(--color-sienna);
+    }
+
+    .form-feedback.is-visible {
+      display: block;
+    }
+
+    /* Noscript fallback */
+    .noscript-note {
+      font-family: var(--font-body);
+      font-size: var(--fs-small);
+      color: var(--color-roast);
+      opacity: 0.6;
+      margin-top: var(--space-3);
+      line-height: 1.6;
+    }
+
+    /* Submit button row */
+    .form-actions {
+      margin-top: var(--space-2);
+    }
+
+    /* ── Contact info column ──────────────────────────────────────────────── */
+    .contact-info {
+      padding-top: var(--space-2);
+    }
+
+    @media (min-width: 860px) {
+      .contact-info {
+        padding-top: var(--space-6);
+      }
+    }
+
+    .contact-info__heading {
+      font-family: var(--font-display);
+      font-size: var(--fs-h3);
+      color: var(--color-roast);
+      margin: 0 0 var(--space-4);
+      line-height: 1.2;
+    }
+
+    .contact-info__list {
+      list-style: none;
+      margin: 0 0 var(--space-5);
+      padding: 0;
+    }
+
+    .contact-info__item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      padding: var(--space-3) 0;
+      border-bottom: 1px solid rgba(23, 23, 23, 0.1);
+    }
+
+    .contact-info__item:first-child {
+      border-top: 1px solid rgba(23, 23, 23, 0.1);
+    }
+
+    .contact-info__icon {
+      flex-shrink: 0;
+      width: 1.25rem;
+      height: 1.25rem;
+      color: var(--color-canopy);
+      margin-top: 0.125rem;
+    }
+
+    .contact-info__content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .contact-info__label {
+      display: block;
+      font-family: var(--font-body);
+      font-size: var(--fs-small);
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--color-canopy);
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-info__value {
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      color: var(--color-roast);
+      line-height: 1.55;
+    }
+
+    .contact-info__value a {
+      color: var(--color-roast);
+      text-decoration: underline;
+      text-decoration-color: rgba(23, 23, 23, 0.3);
+      text-underline-offset: 3px;
+      transition: color 0.2s ease, text-decoration-color 0.2s ease;
+    }
+
+    .contact-info__value a:hover,
+    .contact-info__value a:focus-visible {
+      color: var(--color-canopy);
+      text-decoration-color: var(--color-canopy);
+    }
+
+    /* Brand note */
+    .contact-info__note {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--color-roast);
+      opacity: 0.6;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── HEADER ──────────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="container">
+
+      <!-- Logo -->
+      <a href="index.html" class="site-logo" aria-label="Finca de Garces — return to home">
+        <img src="assets/logo/logo-horizontal-roast.png" alt="Finca de Garces" width="855" height="106">
+      </a>
+
+      <!-- Primary navigation -->
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <ul class="site-nav__list" role="list">
+          <li><a href="index.html" class="site-nav__link">Home</a></li>
+          <li><a href="our-story.html" class="site-nav__link">Our Story</a></li>
+          <li><a href="coffee.html" class="site-nav__link">Coffee</a></li>
+          <li><a href="farm.html" class="site-nav__link">The Farm</a></li>
+          <li><a href="education.html" class="site-nav__link">Education</a></li>
+          <li><a href="awards.html" class="site-nav__link">Awards</a></li>
+          <li><a href="contact.html" class="site-nav__link active" aria-current="page">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Inquire Now</a>
+      </nav>
+
+      <!-- Mobile hamburger toggle -->
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile nav overlay -->
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+  </header>
+
+  <!-- ── MAIN CONTENT ────────────────────────────────────────────────────── -->
+  <main id="main-content">
+
+    <!-- ── PAGE HERO (roast bg) ─────────────────────────────────────────── -->
+    <section class="page-hero" aria-labelledby="contact-hero-heading">
+      <div class="container">
+        <span class="page-hero__eyebrow">Get in Touch</span>
+        <h1 class="page-hero__title" id="contact-hero-heading">Let&rsquo;s Start the Conversation.</h1>
+        <p class="page-hero__lead">
+          Whether you&rsquo;re a roaster, caf&eacute; owner, fellow farmer, or coffee lover &mdash; we&rsquo;d love to hear from you.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── CONTACT SECTION (cream, 2-col desktop) ───────────────────────── -->
+    <section class="contact-section" aria-labelledby="contact-form-heading">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- ── LEFT COLUMN: Inquiry Form (55%) ──────────────────────── -->
+          <div class="contact-form-col reveal">
+            <p class="contact-form-col__sub">inquire with us</p>
+            <h2 class="contact-form-col__heading" id="contact-form-heading">Send Us a Message</h2>
+
+            <!-- Form feedback banners (hidden by default, shown by JS) -->
+            <div
+              class="form-feedback form-feedback--success"
+              id="form-success"
+              role="alert"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              Thank you for reaching out. Your message has been received and we&rsquo;ll respond personally, soon.
+            </div>
+            <div
+              class="form-feedback form-feedback--error"
+              id="form-error"
+              role="alert"
+              aria-live="polite"
+              aria-atomic="true"
+            >
+              Something went wrong sending your message. Please try again, or email us directly.
+            </div>
+
+            <form
+              id="inquiry-form"
+              method="POST"
+              action="<!-- TODO: replace with Formspree/Netlify Forms endpoint -->"
+              novalidate
+            >
+              <!-- Hidden subject line -->
+              <input type="hidden" name="_subject" value="New Inquiry &mdash; Finca de Garces">
+
+              <!-- Row: Name + Email -->
+              <div class="form__row--2">
+
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    autocomplete="name"
+                    aria-describedby="name-error"
+                    aria-required="true"
+                    placeholder="Full name"
+                  >
+                  <span class="form__error" id="name-error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    autocomplete="email"
+                    aria-describedby="email-error"
+                    aria-required="true"
+                    placeholder="you@example.com"
+                  >
+                  <span class="form__error" id="email-error" role="alert" aria-live="polite"></span>
+                </div>
+
+              </div><!-- /.form__row--2 -->
+
+              <!-- Role / who they are -->
+              <div class="form-group">
+                <label for="role">I am a&hellip;</label>
+                <select
+                  id="role"
+                  name="role"
+                  required
+                  aria-describedby="role-error"
+                  aria-required="true"
+                >
+                  <option value="">&mdash; Select &mdash;</option>
+                  <option value="Specialty Roaster">Specialty Roaster</option>
+                  <option value="Cafe Owner">Caf&eacute; Owner</option>
+                  <option value="Coffee Enthusiast">Coffee Enthusiast</option>
+                  <option value="Fellow Farmer">Fellow Farmer</option>
+                  <option value="Other">Other</option>
+                </select>
+                <span class="form__error" id="role-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows="6"
+                  aria-describedby="message-error"
+                  aria-required="true"
+                  placeholder="Tell us about yourself and what you&rsquo;re looking for&hellip;"
+                ></textarea>
+                <span class="form__error" id="message-error" role="alert" aria-live="polite"></span>
+              </div>
+
+              <!-- Submit -->
+              <div class="form-actions">
+                <button type="submit" class="btn btn--primary">Send Inquiry</button>
+              </div>
+
+            </form><!-- /#inquiry-form -->
+
+            <!-- No-JS fallback note -->
+            <noscript>
+              <p class="noscript-note">
+                If you have JavaScript disabled, the form may not submit correctly. Please
+                <!-- TODO: add contact email -->
+                email us directly at <a href="mailto:<!-- TODO: add contact email -->"><!-- TODO: add contact email --></a> with your name, role, and message.
+              </p>
+            </noscript>
+
+          </div><!-- /.contact-form-col -->
+
+          <!-- ── RIGHT COLUMN: Contact Info (45%) ─────────────────────── -->
+          <div class="contact-info reveal reveal--delay-1" aria-label="Contact information">
+
+            <h2 class="contact-info__heading">Find Us</h2>
+
+            <ul class="contact-info__list" role="list">
+
+              <!-- Location -->
+              <li class="contact-info__item">
+                <svg
+                  class="contact-info__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.75"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <div class="contact-info__content">
+                  <span class="contact-info__label">Location</span>
+                  <span class="contact-info__value">
+                    Barangay New Eden, Pangantucan<br>
+                    Bukidnon, Philippines<br>
+                    Mt. Kalatungan Range &middot; 1,300&ndash;1,400 MASL
+                  </span>
+                </div>
+              </li>
+
+              <!-- Email -->
+              <li class="contact-info__item">
+                <svg
+                  class="contact-info__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.75"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <div class="contact-info__content">
+                  <span class="contact-info__label">Email</span>
+                  <span class="contact-info__value">
+                    <!-- TODO: add contact email -->
+                    <a href="mailto:<!-- TODO: add contact email -->" aria-label="Email Finca de Garces">
+                      <!-- TODO: add contact email -->
+                    </a>
+                  </span>
+                </div>
+              </li>
+
+              <!-- Instagram -->
+              <li class="contact-info__item">
+                <svg
+                  class="contact-info__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.75"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <div class="contact-info__content">
+                  <span class="contact-info__label">Instagram</span>
+                  <span class="contact-info__value">
+                    <a
+                      href="https://instagram.com/fincadegarces"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Follow @fincadegarces on Instagram (opens in new tab)"
+                    >@fincadegarces</a>
+                  </span>
+                </div>
+              </li>
+
+              <!-- Hours / availability -->
+              <li class="contact-info__item">
+                <svg
+                  class="contact-info__icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.75"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <div class="contact-info__content">
+                  <span class="contact-info__label">Availability</span>
+                  <span class="contact-info__value">
+                    <!-- TODO: confirm response time / availability -->
+                  </span>
+                </div>
+              </li>
+
+            </ul><!-- /.contact-info__list -->
+
+            <!-- Brand note -->
+            <p class="contact-info__note">We respond to every inquiry personally.</p>
+
+          </div><!-- /.contact-info -->
+
+        </div><!-- /.contact-layout -->
+      </div><!-- /.container -->
+    </section>
+
+  </main><!-- /#main-content -->
+
+  <!-- ── FOOTER ──────────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+
+      <div class="site-footer__grid">
+
+        <!-- Col 1: Brand -->
+        <div class="site-footer__brand">
+          <a href="index.html" class="site-logo" aria-label="Finca de Garces — return to home">
+            <img src="assets/logo/logo-horizontal-cream.png" alt="Finca de Garces" width="855" height="106">
+          </a>
+          <p class="site-footer__tagline">From our family farm to your cup</p>
+          <p class="site-footer__desc">
+            A family-run specialty coffee farm nestled in the highlands of Pangantucan, Bukidnon, growing carefully processed coffee with patience, purpose, and deep respect for the land. Nationally awarded. Rooted in community.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigate -->
+        <div class="site-footer__col">
+          <h4>Navigate</h4>
+          <ul class="site-footer__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="coffee.html">Coffee</a></li>
+            <li><a href="farm.html">The Farm</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="awards.html">Awards</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Connect -->
+        <div class="site-footer__col">
+          <h4>Connect</h4>
+          <ul class="site-footer__links" role="list">
+            <li>
+              <!-- TODO: add email address -->
+              <a href="mailto:hello@fincadegarces.com" aria-label="Email Finca de Garces">
+                hello@fincadegarces.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/fincadegarces"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow @fincadegarces on Instagram"
+              >
+                @fincadegarces
+              </a>
+            </li>
+            <li>
+              <span>Pangantucan, Bukidnon, Philippines</span>
+            </li>
+          </ul>
+
+          <!-- Social links -->
+          <nav class="social-links" aria-label="Social media links">
+            <a
+              href="https://instagram.com/fincadegarces"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow @fincadegarces on Instagram"
+            >
+              <!-- Instagram SVG icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </nav>
+        </div>
+
+      </div><!-- /.site-footer__grid -->
+
+      <!-- Footer bottom row -->
+      <div class="site-footer__bottom">
+        <p class="site-footer__legal">
+          &copy; 2026 Finca de Garces. All rights reserved.
+          &nbsp;&middot;&nbsp;
+          <a href="contact.html" class="site-footer__legal">Inquire</a>
+        </p>
+
+        <!-- Social links repeated in bottom row -->
+        <nav class="social-links" aria-label="Social media links footer">
+          <a
+            href="https://instagram.com/fincadegarces"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow @fincadegarces on Instagram"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </nav>
+      </div><!-- /.site-footer__bottom -->
+
+    </div><!-- /.container -->
+  </footer>
+
+  <script src="js/main.js" defer></script>
+
+  <!-- ── Contact form JS ────────────────────────────────────────────────── -->
+  <script>
+  (function () {
+    'use strict';
+
+    var form       = document.getElementById('inquiry-form');
+    var successMsg = document.getElementById('form-success');
+    var errorMsg   = document.getElementById('form-error');
+
+    if (!form) return;
+
+    /* ── Validation helpers ─────────────────────────────────────────────── */
+    function showError(input, msg) {
+      var errEl = document.getElementById(input.id + '-error');
+      input.setAttribute('aria-invalid', 'true');
+      if (errEl) {
+        errEl.textContent = msg;
+        errEl.style.display = 'block';
+      }
+    }
+
+    function clearError(input) {
+      var errEl = document.getElementById(input.id + '-error');
+      input.removeAttribute('aria-invalid');
+      if (errEl) {
+        errEl.textContent = '';
+        errEl.style.display = 'none';
+      }
+    }
+
+    function validateField(input) {
+      clearError(input);
+
+      if (input.required && !input.value.trim()) {
+        showError(input, 'This field is required.');
+        return false;
+      }
+
+      if (input.type === 'email' && input.value.trim()) {
+        var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRe.test(input.value.trim())) {
+          showError(input, 'Please enter a valid email address.');
+          return false;
+        }
+      }
+
+      if (input.tagName === 'SELECT' && input.required && !input.value) {
+        showError(input, 'Please select an option.');
+        return false;
+      }
+
+      return true;
+    }
+
+    /* Live validation on blur */
+    var fields = form.querySelectorAll('input[required], select[required], textarea[required]');
+    fields.forEach(function (field) {
+      field.addEventListener('blur', function () {
+        validateField(field);
+      });
+      field.addEventListener('input', function () {
+        if (field.getAttribute('aria-invalid') === 'true') {
+          validateField(field);
+        }
+      });
+    });
+
+    /* ── Submission ─────────────────────────────────────────────────────── */
+    form.addEventListener('submit', function (e) {
+      var valid = true;
+
+      fields.forEach(function (field) {
+        if (!validateField(field)) valid = false;
+      });
+
+      if (!valid) {
+        e.preventDefault();
+        /* Move focus to the first invalid field */
+        var firstInvalid = form.querySelector('[aria-invalid="true"]');
+        if (firstInvalid) firstInvalid.focus();
+        return;
+      }
+
+      /* If the action is still a placeholder (dev/no-endpoint), intercept */
+      var action = form.getAttribute('action') || '';
+      if (!action || action.indexOf('TODO') !== -1 || action.trim() === '') {
+        e.preventDefault();
+        /* Show a dev-mode note in the error banner */
+        errorMsg.textContent = 'Form endpoint not configured yet. Please add the Formspree or Netlify Forms action URL to the <form> element.';
+        errorMsg.classList.add('is-visible');
+        successMsg.classList.remove('is-visible');
+        return;
+      }
+
+      /* Real submission — let the browser POST, or intercept for fetch */
+      e.preventDefault();
+
+      var submitBtn = form.querySelector('[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+      }
+
+      var data = new FormData(form);
+
+      fetch(action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (res) {
+          if (res.ok) {
+            successMsg.classList.add('is-visible');
+            errorMsg.classList.remove('is-visible');
+            form.reset();
+            fields.forEach(function (f) { clearError(f); });
+            successMsg.focus();
+          } else {
+            throw new Error('Server error');
+          }
+        })
+        .catch(function () {
+          errorMsg.classList.add('is-visible');
+          successMsg.classList.remove('is-visible');
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Inquiry';
+          }
+        });
+    });
+  }());
+  </script>
+
+</body>
+</html>

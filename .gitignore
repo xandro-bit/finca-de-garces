@@ -1,0 +1,18 @@
+# ── Source materials (kept locally, not for web deploy) ──
+Brand Style Guide - Finca de Garces.pdf
+Finca de Garces PHOTOS and videos/
+
+# ── Build scratch / working files ──
+_render/
+_audit/
+_brandguide_text.txt
+_assets-manifest.md
+fdg_server.log
+
+# ── Local editor / tooling state ──
+.claude/settings.local.json
+
+# ── OS / editor cruft ──
+.DS_Store
+Thumbs.db
+*.log

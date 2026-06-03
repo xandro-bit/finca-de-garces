@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://fincadegarces.com/sitemap.xml
+<!-- Note: update domain when live -->

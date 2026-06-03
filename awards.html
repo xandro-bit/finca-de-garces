@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Awards — Finca de Garces | Nationally Recognized Specialty Coffee</title>
+  <meta name="description" content="Three consecutive years of national recognition at the Philippine Coffee Quality Competition — including Top 1 Arabica Estate Farm (2025) and Best Arabica (2023). Highland specialty coffee from Finca de Garces, Bukidnon.">
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Awards — Finca de Garces | Nationally Recognized Specialty Coffee">
+  <meta property="og:description" content="Three consecutive years of national recognition at the Philippine Coffee Quality Competition — including Top 1 Arabica Estate Farm (2025) and Best Arabica (2023). Highland specialty coffee from Finca de Garces, Bukidnon.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fincadegarces.com/awards.html">
+  <meta property="og:image" content="https://fincadegarces.com/assets/img/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Awards — Finca de Garces | Nationally Recognized Specialty Coffee">
+  <meta name="twitter:description" content="Three consecutive years of national recognition at the Philippine Coffee Quality Competition — including Top 1 Arabica Estate Farm (2025) and Best Arabica (2023). Highland specialty coffee from Finca de Garces, Bukidnon.">
+  <meta name="twitter:image" content="https://fincadegarces.com/assets/img/og-cover.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://fincadegarces.com/awards.html">
+
+  <!-- JSON-LD Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "CoffeeShop"],
+    "name": "Finca de Garces",
+    "url": "https://fincadegarces.com/",
+    "sameAs": [
+      "https://instagram.com/fincadegarces"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pangantucan",
+      "addressRegion": "Bukidnon",
+      "addressCountry": "Philippines"
+    },
+    "description": "Family-run specialty coffee farm in Pangantucan, Bukidnon, Philippines. Nationally recognized in Philippine specialty coffee.",
+    "image": "https://fincadegarces.com/assets/img/og-cover.jpg",
+    "award": [
+      "Top 1 Arabica Estate Farm — 2025 Philippine Coffee Quality Competition (score 84.02)",
+      "Best Arabica — 2023 Philippine Coffee Quality Competition (score 86)",
+      "Best Natural Processed Arabica — 2023 Philippine Coffee Quality Competition"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Stylesheet (Google Fonts imported within) -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Awards-page scoped styles -->
+  <style>
+    /* ── Page Hero (roast bg) ────────────────────────────────────────────── */
+    .awards-hero {
+      background-color: var(--color-roast);
+      color: var(--color-cream);
+      padding: clamp(5rem, 12vw, 10rem) 0 clamp(4rem, 9vw, 8rem);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle decorative mountain line watermark */
+    .awards-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300' preserveAspectRatio='none'%3E%3Cpolyline points='0,280 200,160 360,220 520,80 680,180 840,40 1000,140 1200,100 1200,300 0,300' fill='none' stroke='%23FAFAFD' stroke-width='1' opacity='0.05'/%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: center bottom;
+      pointer-events: none;
+    }
+
+    .awards-hero .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .awards-hero .text-eyebrow {
+      color: var(--color-gold);
+      margin-bottom: var(--space-2);
+    }
+
+    .awards-hero__title {
+      font-family: var(--font-display);
+      font-size: var(--fs-hero);
+      line-height: 1.08;
+      margin: 0 0 var(--space-3);
+      color: var(--color-cream);
+    }
+
+    .awards-hero__lead {
+      font-size: var(--fs-body);
+      line-height: 1.7;
+      max-width: 58ch;
+      margin: 0 auto;
+      opacity: 0.82;
+    }
+
+    /* ── Intro paragraph (cream bg) ─────────────────────────────────────── */
+    .awards-intro {
+      background-color: var(--color-cream);
+      padding: clamp(4rem, 9vw, 8rem) 0;
+    }
+
+    .awards-intro__inner {
+      max-width: 64ch;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .awards-intro__text {
+      font-size: var(--fs-body);
+      line-height: 1.75;
+      color: var(--color-roast);
+    }
+
+    /* ── Awards Grid section ─────────────────────────────────────────────── */
+    .awards-grid-section {
+      background-color: var(--color-cream);
+      padding: 0 0 clamp(4rem, 10vw, 9rem);
+    }
+
+    /* 3-column grid, collapses to 2 then 1 */
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+    }
+
+    @media (max-width: 900px) {
+      .awards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 580px) {
+      .awards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ── Award Card ──────────────────────────────────────────────────────── */
+    .card--award {
+      background-color: #fff;
+      border: 1px solid rgba(23, 23, 23, 0.08);
+      border-radius: 6px;
+      padding: var(--space-4) var(--space-3);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-2);
+      transition: box-shadow 300ms ease-out, transform 300ms ease-out;
+    }
+
+    .card--award:hover {
+      box-shadow: 0 8px 32px rgba(23, 23, 23, 0.1);
+      transform: translateY(-3px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card--award {
+        transition: none;
+      }
+      .card--award:hover {
+        transform: none;
+      }
+    }
+
+    /* Gold circle badge */
+    .award-badge {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background-color: var(--color-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-bottom: var(--space-1);
+    }
+
+    .award-badge svg {
+      color: var(--color-roast);
+      flex-shrink: 0;
+    }
+
+    .award-year {
+      font-family: var(--font-body);
+      font-size: var(--fs-small);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-sienna);
+    }
+
+    .award-title {
+      font-family: var(--font-display);
+      font-size: var(--fs-h3);
+      line-height: 1.15;
+      color: var(--color-roast);
+      margin: 0;
+    }
+
+    .award-comp {
+      font-family: var(--font-body);
+      font-size: var(--fs-small);
+      color: var(--color-roast);
+      opacity: 0.6;
+      line-height: 1.5;
+    }
+
+    /* ── Credibility statement (canopy bg) ──────────────────────────────── */
+    .awards-credibility {
+      background-color: var(--color-canopy);
+      color: var(--color-cream);
+      padding: clamp(4rem, 9vw, 8rem) 0;
+    }
+
+    .awards-credibility__inner {
+      max-width: 60ch;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .awards-credibility__text {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      line-height: 1.7;
+      opacity: 0.9;
+    }
+
+    /* ── Closing CTA band (roast bg) ─────────────────────────────────────── */
+    /* Reuses .section--inverse / .cta-band from styles.css — no extra styles needed */
+  </style>
+</head>
+<body>
+
+  <!-- ── HEADER ──────────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="container">
+
+      <!-- Logo -->
+      <a href="index.html" class="site-logo" aria-label="Finca de Garces — return to home">
+        <img src="assets/logo/logo-horizontal-roast.png" alt="Finca de Garces" width="855" height="106">
+      </a>
+
+      <!-- Primary navigation -->
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <ul class="site-nav__list" role="list">
+          <li><a href="index.html" class="site-nav__link">Home</a></li>
+          <li><a href="our-story.html" class="site-nav__link">Our Story</a></li>
+          <li><a href="coffee.html" class="site-nav__link">Coffee</a></li>
+          <li><a href="farm.html" class="site-nav__link">The Farm</a></li>
+          <li><a href="education.html" class="site-nav__link">Education</a></li>
+          <li><a href="awards.html" class="site-nav__link active" aria-current="page">Awards</a></li>
+          <li><a href="contact.html" class="site-nav__link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn--primary">Inquire Now</a>
+      </nav>
+
+      <!-- Mobile hamburger toggle -->
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Toggle navigation menu"
+      >
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile nav overlay -->
+    <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+  </header>
+
+  <!-- ── MAIN CONTENT ────────────────────────────────────────────────────── -->
+  <main id="main-content">
+
+    <!-- ── SECTION 1: PAGE HERO (roast bg) ──────────────────────────────── -->
+    <section class="awards-hero" aria-labelledby="awards-hero-heading">
+      <div class="container">
+        <p class="text-eyebrow">Recognition</p>
+        <h1 class="awards-hero__title" id="awards-hero-heading">Nationally Recognized.</h1>
+        <p class="awards-hero__lead">
+          In only a handful of harvests, Finca de Garces has earned three consecutive years of national recognition at the Philippine Coffee Quality Competition&nbsp;&mdash; including the country&rsquo;s Top 1 Arabica Estate Farm. Not by chasing trophies, but by tending to every detail of the craft with patience, honesty, and genuine love for the land.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── SECTION 2: INTRO PARAGRAPH (cream bg) ────────────────────────── -->
+    <section class="awards-intro" aria-labelledby="awards-intro-heading">
+      <div class="container">
+        <div class="awards-intro__inner reveal">
+          <p class="text-script" aria-hidden="true">what recognition means to us</p>
+          <h2 id="awards-intro-heading" class="sr-only">What Recognition Means to Us</h2>
+          <p class="awards-intro__text">
+            We do not display these recognitions as trophies on a shelf. Each one is a quiet confirmation that the way we grow&nbsp;&mdash; slowly, sustainably, with deep respect for the process&nbsp;&mdash; is a path worth continuing. Awards do not change how we farm; they affirm that the patience behind every cup is worth it. They belong just as much to the farmers, the land, and the community that makes this possible as they do to us.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 3: AWARDS GRID ────────────────────────────────────────── -->
+    <section class="awards-grid-section" aria-labelledby="awards-grid-heading">
+      <div class="container">
+
+        <h2 id="awards-grid-heading" class="sr-only">National Recognition</h2>
+
+        <!-- Verified from public reporting (Good Cup PH; SunStar). -->
+        <!-- TODO: confirm exact award titles, scores, and any additional recognitions with client. -->
+        <div class="awards-grid" role="list">
+
+          <!-- 2025 — Top 1 Arabica Estate Farm -->
+          <article class="card--award reveal" role="listitem">
+            <div class="award-badge" aria-hidden="true">
+              <!-- Medal / ribbon SVG icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="32"
+                height="32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle cx="12" cy="8" r="6"></circle>
+                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"></path>
+              </svg>
+            </div>
+            <p class="award-year">2025</p>
+            <h3 class="award-title">Top 1 Arabica Estate Farm</h3>
+            <p class="award-comp">Philippine Coffee Quality Competition &middot; National &middot; Score 84.02, from more than 100 entries</p>
+          </article>
+
+          <!-- 2023 — Best Arabica & Best Natural Processed Arabica -->
+          <article class="card--award reveal reveal--delay-1" role="listitem">
+            <div class="award-badge" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="32"
+                height="32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle cx="12" cy="8" r="6"></circle>
+                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"></path>
+              </svg>
+            </div>
+            <p class="award-year">2023</p>
+            <h3 class="award-title">Best Arabica &amp; Best Natural Processed Arabica</h3>
+            <p class="award-comp">Philippine Coffee Quality Competition &middot; Cupping score 86</p>
+          </article>
+
+          <!-- 2023–2025 — Three consecutive years of recognition -->
+          <article class="card--award reveal reveal--delay-2" role="listitem">
+            <div class="award-badge" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="32"
+                height="32"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle cx="12" cy="8" r="6"></circle>
+                <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"></path>
+              </svg>
+            </div>
+            <p class="award-year">2023&ndash;2025</p>
+            <h3 class="award-title">Three Consecutive Years of National Recognition</h3>
+            <p class="award-comp">Philippine Coffee Quality Competition &middot; From our first harvests to today</p>
+          </article>
+
+        </div><!-- /.awards-grid -->
+      </div><!-- /.container -->
+    </section>
+
+    <!-- ── SECTION 4: CREDIBILITY STATEMENT (canopy bg) ─────────────────── -->
+    <section class="awards-credibility" aria-labelledby="credibility-heading">
+      <div class="container">
+        <div class="awards-credibility__inner reveal">
+          <p class="text-script" aria-hidden="true">grounded excellence</p>
+          <h2 id="credibility-heading" class="sr-only">Quality Recognized Nationally</h2>
+          <p class="awards-credibility__text">
+            At the 2025 Philippine Coffee Quality Competition, our highland lot was named the country&rsquo;s Top 1 Arabica Estate Farm&nbsp;&mdash; the judges noting caramel, orange-peel zest, floral notes, and a tea-like finish. Recognition like this belongs to the land, the farmers, and the patience behind every harvest. We invite you to taste that story for yourself.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 5: CLOSING CTA BAND (roast bg) ───────────────────────── -->
+    <section class="section section--inverse" aria-labelledby="awards-cta-heading">
+      <div class="container cta-band">
+        <p class="text-script">let&rsquo;s connect</p>
+        <h2 id="awards-cta-heading">This is not just coffee, this is something meaningful.</h2>
+        <p>
+          Whether you are a specialty roaster, a caf&eacute; owner, a fellow farmer, or simply someone who cares deeply about the story behind what&rsquo;s in your cup&nbsp;&mdash; we would love to hear from you.
+        </p>
+        <a href="contact.html" class="btn btn--primary">Inquire Now</a>
+      </div>
+    </section>
+
+  </main><!-- /#main-content -->
+
+  <!-- ── FOOTER ──────────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+
+      <div class="site-footer__grid">
+
+        <!-- Col 1: Brand -->
+        <div class="site-footer__brand">
+          <a href="index.html" class="site-logo" aria-label="Finca de Garces — return to home">
+            <img src="assets/logo/logo-horizontal-cream.png" alt="Finca de Garces" width="855" height="106">
+          </a>
+          <p class="site-footer__tagline">From our family farm to your cup</p>
+          <p class="site-footer__desc">
+            A family-run specialty coffee farm nestled in the highlands of Pangantucan, Bukidnon, growing carefully processed coffee with patience, purpose, and deep respect for the land. Nationally awarded. Rooted in community.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigate -->
+        <div class="site-footer__col">
+          <h4>Navigate</h4>
+          <ul class="site-footer__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="coffee.html">Coffee</a></li>
+            <li><a href="farm.html">The Farm</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="awards.html">Awards</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Connect -->
+        <div class="site-footer__col">
+          <h4>Connect</h4>
+          <ul class="site-footer__links" role="list">
+            <li>
+              <!-- TODO: add email address -->
+              <a href="mailto:hello@fincadegarces.com" aria-label="Email Finca de Garces">
+                hello@fincadegarces.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/fincadegarces"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow @fincadegarces on Instagram"
+              >
+                @fincadegarces
+              </a>
+            </li>
+            <li>
+              <span>Pangantucan, Bukidnon, Philippines</span>
+            </li>
+          </ul>
+
+          <!-- Social links -->
+          <nav class="social-links" aria-label="Social media links">
+            <a
+              href="https://instagram.com/fincadegarces"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow @fincadegarces on Instagram"
+            >
+              <!-- Instagram SVG icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+          </nav>
+        </div>
+
+      </div><!-- /.site-footer__grid -->
+
+      <!-- Footer bottom row -->
+      <div class="site-footer__bottom">
+        <p class="site-footer__legal">
+          &copy; 2026 Finca de Garces. All rights reserved.
+          &nbsp;&middot;&nbsp;
+          <a href="contact.html" class="site-footer__legal">Inquire</a>
+        </p>
+
+        <!-- Social links repeated in bottom row -->
+        <nav class="social-links" aria-label="Social media links footer">
+          <a
+            href="https://instagram.com/fincadegarces"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Follow @fincadegarces on Instagram"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.75"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+        </nav>
+      </div><!-- /.site-footer__bottom -->
+
+    </div><!-- /.container -->
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

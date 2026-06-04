@@ -406,16 +406,21 @@ p:last-child {
   object-position: left center;
 }
 
+/* Slightly smaller logo in the header so the full nav has room before the hamburger breakpoint */
+.site-header .site-logo img {
+  height: 40px;
+}
+
 .site-nav {
   display: flex;
   align-items: center;
-  gap: var(--space-6);
+  gap: var(--space-5);
 }
 
 .site-nav__list {
   display: flex;
   align-items: center;
-  gap: var(--space-5);
+  gap: var(--space-4);
 }
 
 .site-nav__link {
@@ -426,6 +431,7 @@ p:last-child {
   color: var(--color-roast);
   position: relative;
   padding-block: 0.25em;
+  white-space: nowrap;
   transition: color var(--transition-base);
 }
 
@@ -478,7 +484,7 @@ p:last-child {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1240px) {
   .nav-toggle {
     display: flex;
   }
@@ -715,8 +721,21 @@ p:last-child {
 /* ── 12. VALUES STRIP ────────────────────────────────────────────────────── */
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  grid-template-columns: 1fr;
   gap: var(--space-5);
+}
+
+@media (min-width: 560px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  /* 6 values in a balanced 3 + 3, never an orphaned 4 + 2 */
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .value-item {
